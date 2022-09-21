@@ -1,0 +1,9 @@
+#
+# Added by iinstall.bat
+# If not running interactively, don't do anything
+[[ "$-" != *i* ]] && return
+
+if [ ".${_CYGWDIR}" != "." ]; then
+ cd "${_CYGWDIR}"
+fi
+unset _CYGWDIR
