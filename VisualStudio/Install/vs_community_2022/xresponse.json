@@ -1,0 +1,10 @@
+{
+	"installChannelUri": ".\\ChannelManifest.json",
+	"channelUri": "C:\\VisualStudio\\Layouts\\vs2022c\\Packages\\ChannelManifest.json",
+	"installCatalogUri": ".\\Catalog.json",
+	"channelId": "VisualStudio.17.Release",
+	"productId": "Microsoft.VisualStudio.Product.Community",
+	"add": [
+		"Microsoft.VisualStudio.Workload.NativeDesktop;includeRecommended"
+	]
+}
