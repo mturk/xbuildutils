@@ -22,7 +22,7 @@ set "PATH=%cd%;%PATH%"
 popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
 set "Java8=8u%Java8Ver%%Java8Bld%"
 set "Java8Dir=8.0_%Java8Ver%_%Java8Bld%"
 set "JdkDirName=jdk8u%Java8Ver%-%Java8Bld%"
@@ -32,6 +32,7 @@ rem
 echo Installing Temurin OpenJDK8U-%Java8% ...
 rem
 if not exist "%JdkArch%" (
+    echo Downloading %JdkArch% ...
     curl %CurlOpts% -o %JdkArch% %UrlBase%/%JdkArch%
 )
 rem

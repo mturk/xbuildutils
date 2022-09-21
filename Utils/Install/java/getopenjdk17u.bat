@@ -22,7 +22,7 @@ set "PATH=%cd%;%PATH%"
 popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
 set "Java17=%Java17Ver%_%Java17Bld%"
 set "JdkDirName=jdk-%Java17Ver%+%Java17Bld%"
 set "JreDirName=%JdkDirName%-jre"
@@ -32,19 +32,18 @@ set "UrlBase=https://github.com/adoptium/temurin17-binaries/releases/download/%J
 rem
 echo Installing Temurin OpenJDK-%Java17% ...
 rem
+rem
 if not exist "%JdkArch%" (
+    echo Downloading %JdkArch% ...
     curl %CurlOpts% -o %JdkArch% %UrlBase%/%JdkArch%
+)
+if not exist "%JreArch%" (
+    echo Downloading %JreArch% ...
     curl %CurlOpts% -o %JreArch% %UrlBase%/%JreArch%
 )
 rem
-7za t %JreArch% >NUL 2>&1 && ( goto Exp )
-echo.
-echo Failed to download Temurin OpenJDK %Java17%
-del /F /Q %JdkArch% 2>NUL
-del /F /Q %JreArch% 2>NUL
-exit /B 1
-rem
-:Exp
+7za t %JdkArch% >NUL 2>&1 || ( goto ErrArch )
+7za t %JreArch% >NUL 2>&1 || ( goto ErrArch )
 rem
 echo Java   : Temurin OpenJDK %Java17% >>install.log
 rem Remove previous stuff
@@ -65,3 +64,10 @@ echo.
 echo Finished.
 :End
 exit /B 0
+rem
+:ErrArch
+echo.
+echo Failed to download Temurin OpenJDK %Java17%
+del /F /Q %JdkArch% 2>NUL
+del /F /Q %JreArch% 2>NUL
+exit /B 1

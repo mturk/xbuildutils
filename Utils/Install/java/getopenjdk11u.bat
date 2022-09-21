@@ -22,7 +22,7 @@ set "PATH=%cd%;%PATH%"
 popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
 set "Java11=%Java11Ver%_%Java11Bld%"
 set "JdkDirName=jdk-%Java11Ver%+%Java11Bld%"
 set "JreDirName=%JdkDirName%-jre"
@@ -33,16 +33,16 @@ rem
 echo Installing Temurin OpenJDK-%Java11% ...
 rem
 if not exist "%JdkArch%" (
+    echo Downloading %JdkArch% ...
     curl %CurlOpts% -o %JdkArch% %UrlBase%/%JdkArch%
+)
+if not exist "%JreArch%" (
+    echo Downloading %JreArch% ...
     curl %CurlOpts% -o %JreArch% %UrlBase%/%JreArch%
 )
 rem
-7za t %JreArch% >NUL 2>&1 && ( goto Exp )
-echo.
-echo Failed to download Temurin OpenJDK %Java11%
-del /F /Q %JdkArch% 2>NUL
-del /F /Q %JreArch% 2>NUL
-exit /B 1
+7za t %JdkArch% >NUL 2>&1 || ( goto ErrArch )
+7za t %JreArch% >NUL 2>&1 || ( goto ErrArch )
 rem
 :Exp
 rem
@@ -65,3 +65,10 @@ echo.
 echo Finished.
 :End
 exit /B 0
+rem
+:ErrArch
+echo.
+echo Failed to download Temurin OpenJDK %Java11%
+del /F /Q %JdkArch% 2>NUL
+del /F /Q %JreArch% 2>NUL
+exit /B 1

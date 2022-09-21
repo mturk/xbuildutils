@@ -22,7 +22,7 @@ set "PATH=%cd%;%PATH%"
 popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
 set "Java18=%Java18Ver%_%Java18Bld%"
 set "JdkDirName=jdk-%Java18Ver%+%Java18Bld%"
 set "JreDirName=%JdkDirName%-jre"
@@ -31,22 +31,19 @@ set "JreArch=OpenJDK18U-jre_x64_windows_hotspot_%Java18%.zip"
 set "UrlBase=https://github.com/adoptium/temurin18-binaries/releases/download/%JdkDirName%"
 rem
 echo Installing Temurin OpenJDK-%Java18% ...
-rem
 if not exist "%JdkArch%" (
+    echo Downloading %JdkArch% ...
     curl %CurlOpts% -o %JdkArch% %UrlBase%/%JdkArch%
+)
+if not exist "%JreArch%" (
+    echo Downloading %JreArch% ...
     curl %CurlOpts% -o %JreArch% %UrlBase%/%JreArch%
 )
 rem
-7za t %JreArch% >NUL 2>&1 && ( goto Exp )
-echo.
-echo Failed to download Temurin OpenJDK %Java18%
-del /F /Q %JdkArch% 2>NUL
-del /F /Q %JreArch% 2>NUL
-exit /B 1
+7za t %JdkArch% >NUL 2>&1 || ( goto ErrArch )
+7za t %JreArch% >NUL 2>&1 || ( goto ErrArch )
 rem
-:Exp
-rem
-echo Java   : Temurin OpenJDK %Java18% >>compile.log
+echo Java   : Temurin OpenJDK %Java18% >>install.log
 rem Remove previous stuff
 rd /S /Q %_ToolsPath%\java\%Java18% 2>NUL
 md %_ToolsPath%\java\%Java18% >NUL 2>&1
@@ -58,10 +55,17 @@ rem
 move /Y %JdkDirName% jdk >NUL
 move /Y %JreDirName% jre >NUL
 popd
-echo rem Set Temurin OpenJDK 18 Environment Variables >>compile.log
-echo rem set "JDK_18_HOME=%%_ToolsPath%%\java\%Java18%\jdk" >>compile.log
-echo rem set "JRE_18_HOME=%%_ToolsPath%%\java\%Java18%\jre" >>compile.log
+echo rem Set Temurin OpenJDK 18 Environment Variables >>install.log
+echo rem set "JDK_18_HOME=%%_ToolsPath%%\java\%Java18%\jdk" >>install.log
+echo rem set "JRE_18_HOME=%%_ToolsPath%%\java\%Java18%\jre" >>install.log
 echo.
 echo Finished.
 :End
 exit /B 0
+rem
+:ErrArch
+echo.
+echo Failed to download Temurin OpenJDK %Java18%
+del /F /Q %JdkArch% 2>NUL
+del /F /Q %JreArch% 2>NUL
+exit /B 1
