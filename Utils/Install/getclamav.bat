@@ -17,12 +17,18 @@ rem Dowloads ClamAV
 rem
 pushd %~dp0
 set "_WorkPath=%cd%"
+pushd ..\..\
+set "PATH=%cd%;%PATH%"
+popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
+rem
 set "ClamAVName=clamav-%ClamAVVer%.win.x64"
 set "ClamAVArch=%ClamAVName%.zip"
 if not exist "%ClamAVArch%" (
+    echo.
+    echo Downloading %ClamAVArch% ...
     curl %CurlOpts% -o %ClamAVArch% https://www.clamav.net/downloads/production/%ClamAVArch%
 )
 rem
@@ -34,7 +40,7 @@ exit /B 1
 rem
 :Exp
 rem
-echo ClamAV : %ClamAVName% >>compile.log
+echo [%DATE% %TIME%] ClamAV : %ClamAVName% >>install.log
 rem Remove previous stuff
 rd /S /Q %_UtilsPath%\clamav\%ClamAVVer% 2>NUL
 md %_UtilsPath%\clamav >NUL 2>&1

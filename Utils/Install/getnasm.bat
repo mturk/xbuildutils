@@ -17,12 +17,18 @@ rem Dowloads Netwide assembler
 rem
 pushd %~dp0
 set "_WorkPath=%cd%"
+pushd ..\..\
+set "PATH=%cd%;%PATH%"
+popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
+rem
 set "NasmName=nasm-%NasmVer%-win64"
 set "NasmArch=%NasmName%.zip"
 if not exist "%NasmArch%" (
+    echo.
+    echo Downloading %NasmArch% ...
     curl %CurlOpts% -o %NasmArch% https://www.nasm.us/pub/nasm/releasebuilds/%NasmVer%/win64/%NasmArch%
 )
 rem
@@ -34,7 +40,7 @@ exit /B 1
 rem
 :Exp
 rem
-echo Nasm   : %NasmName% >>compile.log
+echo [%DATE% %TIME%] Nasm   : %NasmName% >>install.log
 rem Remove previous stuff
 rd /S /Q %_UtilsPath%\nasm\%NasmVer% 2>NUL
 md %_UtilsPath%\nasm >NUL 2>&1

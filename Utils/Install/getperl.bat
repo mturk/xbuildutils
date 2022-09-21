@@ -17,14 +17,18 @@ rem Dowloads Strawberry Perl
 rem
 pushd %~dp0
 set "_WorkPath=%cd%"
+pushd ..\..\
+set "PATH=%cd%;%PATH%"
+popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
+rem
 set "PerlName=strawberry-perl-%PerlVer%-64bit-portable"
 set "PerlArch=%PerlName%.zip"
 if not exist "%PerlArch%" (
     echo.
-    echo Downloading %PerlArch% ... this can take a while.
+    echo Downloading %PerlArch% ...
     curl %CurlOpts% -o %PerlArch% http://strawberryperl.com/download/%PerlVer%/%PerlArch%
 )
 rem
@@ -36,7 +40,7 @@ exit /B 1
 rem
 :Exp
 rem
-echo Perl   : %PerlName% >>compile.log
+echo [%DATE% %TIME%] Perl   : %PerlName% >>install.log
 rem Remove previous stuff
 rd /S /Q %_UtilsPath%\perl\%PerlVer% 2>NUL
 md %_UtilsPath%\perl\%PerlVer% >NUL 2>&1

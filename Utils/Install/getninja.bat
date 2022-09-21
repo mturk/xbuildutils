@@ -17,12 +17,18 @@ rem Download Ninja
 rem
 pushd %~dp0
 set "_WorkPath=%cd%"
+pushd ..\..\
+set "PATH=%cd%;%PATH%"
+popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
+rem
 set "NinjaName=ninja-%NinjaVer%-win"
 set "NinjaArch=%NinjaName%.zip"
 if not exist "%NinjaArch%" (
+    echo.
+    echo Downloading %NinjaArch% ...
     curl %CurlOpts% -o %NinjaArch% https://github.com/ninja-build/ninja/releases/download/v%NinjaVer%/ninja-win.zip	
 )
 rem
@@ -34,7 +40,7 @@ exit /B 1
 rem
 :Exp
 rem
-echo Ninja  : %NinjaName% >>compile.log
+echo [%DATE% %TIME%] Ninja  : %NinjaName% >>install.log
 rem Remove previous stuff
 rd /S /Q %_UtilsPath%\ninja\%NinjaVer% 2>NUL
 md %_UtilsPath%\ninja\%NinjaVer% >NUL 2>&1

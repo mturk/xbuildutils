@@ -24,5 +24,4 @@ rem
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
 set "_UtilsPath=%SystemDrive%\Utils"
-set "PATH=%_UtilsPath%;%PATH%"
 rem

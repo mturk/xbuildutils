@@ -17,12 +17,18 @@ rem Dowloads CMake
 rem
 pushd %~dp0
 set "_WorkPath=%cd%"
+pushd ..\..\
+set "PATH=%cd%;%PATH%"
+popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
+rem
 set "CMakeName=cmake-%CMakeVer%-windows-x86_64"
 set "CMakeArch=%CMakeName%.zip"
 if not exist "%CMakeArch%" (
+    echo.
+    echo Downloading %CMakeArch% ...
     curl %CurlOpts% -o %CMakeArch% https://github.com/Kitware/CMake/releases/download/v%CMakeVer%/%CMakeArch%
 )
 rem
@@ -34,7 +40,7 @@ exit /B 1
 rem
 :Exp
 rem
-echo CMake  : %CMakeName% >>compile.log
+echo [%DATE% %TIME%] CMake  : %CMakeName% >>install.log
 rem Remove previous stuff
 rd /S /Q %_UtilsPath%\cmake\%CMakeVer% 2>NUL
 md %_UtilsPath%\cmake >NUL 2>&1

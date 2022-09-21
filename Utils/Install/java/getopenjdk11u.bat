@@ -46,7 +46,7 @@ rem
 rem
 :Exp
 rem
-echo Java   : Temurin OpenJDK %Java11% >>install.log
+echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java11% >>install.log
 rem Remove previous stuff
 rd /S /Q %_ToolsPath%\java\%Java11% 2>NUL
 md %_ToolsPath%\java\%Java11% >NUL 2>&1

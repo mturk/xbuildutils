@@ -17,12 +17,18 @@ rem Download Cygwrun
 rem
 pushd %~dp0
 set "_WorkPath=%cd%"
+pushd ..\..\
+set "PATH=%cd%;%PATH%"
+popd
 popd
 rem Get versions
-call iversions.bat
+call %_WorkPath%\iversions.bat
+rem
 set "CygwrunName=cygwrun-%CygwrunVer%-win-x64"
 set "CygwrunArch=%CygwrunName%.zip"
 if not exist "%CygwrunArch%" (
+    echo.
+    echo Downloading %CygwrunArch% ...
     curl %CurlOpts% -o %CygwrunArch% https://github.com/mturk/cygwrun/releases/download/v%CygwrunVer%/%CygwrunArch%
 )
 rem
@@ -34,7 +40,7 @@ exit /B 1
 rem
 :Exp
 rem
-echo Cygwrun: %CygwrunName% >>compile.log
+echo [%DATE% %TIME%] Cygwrun: %CygwrunName% >>install.log
 rem Remove previous stuff
 rd /S /Q %_UtilsPath%\cygwrun\%CygwrunVer% 2>NUL
 md %_UtilsPath%\cygwrun\%CygwrunVer% >NUL 2>&1

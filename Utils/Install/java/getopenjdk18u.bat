@@ -43,7 +43,7 @@ rem
 7za t %JdkArch% >NUL 2>&1 || ( goto ErrArch )
 7za t %JreArch% >NUL 2>&1 || ( goto ErrArch )
 rem
-echo Java   : Temurin OpenJDK %Java18% >>install.log
+echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java18% >>install.log
 rem Remove previous stuff
 rd /S /Q %_ToolsPath%\java\%Java18% 2>NUL
 md %_ToolsPath%\java\%Java18% >NUL 2>&1
