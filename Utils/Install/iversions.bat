@@ -19,6 +19,7 @@ set "NasmVer=2.15.05"
 set "CygwrunVer=1.1.5"
 set "CMakeVer=3.24.3"
 set "ClamAVVer=0.105.1"
+set "ClamAVBld=0.105.1-2"
 set "NinjaVer=1.11.1"
 rem
 rem

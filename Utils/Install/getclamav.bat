@@ -25,7 +25,8 @@ rem Get versions
 call %_WorkPath%\iversions.bat
 rem
 set "ClamAVName=clamav-%ClamAVVer%.win.x64"
-set "ClamAVArch=%ClamAVName%.zip"
+set "ClamAVDist=clamav-%ClamAVBld%.win.x64"
+set "ClamAVArch=%ClamAVDist%.zip"
 if not exist "%ClamAVArch%" (
     echo.
     echo Downloading %ClamAVArch% ...
