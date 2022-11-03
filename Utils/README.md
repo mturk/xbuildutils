@@ -4,7 +4,7 @@
 
 * **curl: 7.86.0**
 
-  https://curl.se/windows/dl-7.86.0/curl-7.86.0-win64-mingw.zip
+  https://curl.se/windows/dl-7.86.0_1/curl-7.86.0_1-win64-mingw.zip
 
 * **7-Zip: 22.01**
 
