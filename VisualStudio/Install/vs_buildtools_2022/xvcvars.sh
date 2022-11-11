@@ -17,8 +17,8 @@
 #
 #
 
-export "VSCMD_VER=17.3.4"
-export "VCToolsVersion=14.33.31629"
+export "VSCMD_VER=17.4.0"
+export "VCToolsVersion=14.34.31933"
 export "WindowsSdkVersion=10.0.19041.0"
 
 _ToolsPath="/cygdrive/c/Tools"
@@ -28,7 +28,7 @@ export "WindowsSdkDir=$_ToolsPath/wsdk19041"
 export "VSINSTALLDIR=$_ToolsPath/msvs2022b"
 export "VCINSTALLDIR=$VSINSTALLDIR/VC"
 export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
-export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/14.32.31326"
+export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/14.34.31931"
 
 _PerlVersion="5.32.1.1"
 _NasmVersion="2.15.05"

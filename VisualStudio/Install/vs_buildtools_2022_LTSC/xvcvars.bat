@@ -13,7 +13,7 @@ rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
 rem
-set "VSCMD_VER=17.2.8"
+set "VSCMD_VER=17.2.10"
 set "VCToolsVersion=14.32.31326"
 set "WindowsSdkVersion=10.0.19041.0"
 rem

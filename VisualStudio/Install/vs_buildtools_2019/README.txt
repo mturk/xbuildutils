@@ -1,4 +1,4 @@
 Versions:
 
-Visual Studio: 16.11.19
+Visual Studio: 16.11.21
 Windows SDK: 10.0.19041
