@@ -17,11 +17,11 @@ rem
 set "Java8Ver=345"
 set "Java8Bld=b01"
 rem
-set "Java11Ver=11.0.16.1"
-set "Java11Bld=1"
+set "Java11Ver=11.0.17"
+set "Java11Bld=8"
 rem
-set "Java17Ver=17.0.4.1"
-set "Java17Bld=1"
+set "Java17Ver=17.0.5"
+set "Java17Bld=8"
 rem
 set "Java18Ver=18.0.2.1"
 set "Java18Bld=1"
