@@ -45,6 +45,7 @@ rem
 7za t %JdkArch% >NUL 2>&1 || ( goto ErrArch )
 7za t %JreArch% >NUL 2>&1 || ( goto ErrArch )
 rem
+echo. >>install.log
 echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java17% >>install.log
 rem Remove previous stuff
 rd /S /Q %_ToolsPath%\java\%Java17% 2>NUL
@@ -60,6 +61,12 @@ popd
 echo rem Set Temurin OpenJDK 17 Environment Variables >>install.log
 echo rem set "JDK_17_HOME=%%_ToolsPath%%\java\%Java17%\jdk" >>install.log
 echo rem set "JRE_17_HOME=%%_ToolsPath%%\java\%Java17%\jre" >>install.log
+echo. >>install.log
+echo rem Set Temurin OpenJDK 17 System Environment Variables >>install.log
+echo rem setx JDK_17_HOME %%_ToolsPath%%\java\%Java17%\jdk /M >>install.log
+echo rem setx JRE_17_HOME %%_ToolsPath%%\java\%Java17%\jre /M >>install.log
+echo rem setx JAVA_HOME ^^%%JDK_17_HOME^^%% /M >>install.log
+echo rem setx JRE_HOME ^^%%JRE_17_HOME^^%% /M >>install.log
 echo.
 echo Finished.
 :End

@@ -46,6 +46,7 @@ rem
 rem
 :Exp
 rem
+echo. >>install.log
 echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java11% >>install.log
 rem Remove previous stuff
 rd /S /Q %_ToolsPath%\java\%Java11% 2>NUL
@@ -61,6 +62,14 @@ popd
 echo rem Set Temurin OpenJDK 11 Environment Variables >>install.log
 echo rem set "JDK_11_HOME=%%_ToolsPath%%\java\%Java11%\jdk" >>install.log
 echo rem set "JRE_11_HOME=%%_ToolsPath%%\java\%Java11%\jre" >>install.log
+echo. >>install.log
+echo rem Set Temurin OpenJDK 11 System Environment Variables >>install.log
+echo rem set "_ToolsPath=%_ToolsPath%" >>install.log
+echo rem setx JDK_11_HOME %%_ToolsPath%%\java\%Java11%\jdk /M >>install.log
+echo rem setx JRE_11_HOME %%_ToolsPath%%\java\%Java11%\jre /M >>install.log
+echo rem setx JAVA_HOME ^^%%JDK_11_HOME^^%% /M >>install.log
+echo rem setx JRE_HOME ^^%%JRE_11_HOME^^%% /M >>install.log
+
 echo.
 echo Finished.
 :End

@@ -44,6 +44,7 @@ exit /B 1
 rem
 :Exp
 rem
+echo. >>install.log
 echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java8% >>install.log
 md %_ToolsPath%\java >NUL 2>&1
 rem Remove previous stuff
@@ -57,6 +58,10 @@ popd
 echo rem Set Temurin OpenJDK 8 Environment Variables >>install.log
 echo rem set "JDK_8_HOME=%%_ToolsPath%%\java\%Java8Dir%" >>install.log
 echo rem set "JRE_8_HOME=%%_ToolsPath%%\java\%Java8Dir%\jre" >>install.log
+echo. >>install.log
+echo rem Set Temurin OpenJDK 8 System Environment Variables >>install.log
+echo rem setx JDK_8_HOME %%_ToolsPath%%\java\%Java8Dir% /M >>install.log
+echo rem setx JRE_8_HOME %%_ToolsPath%%\java\%Java8Dir%\jre/M >>install.log
 echo.
 echo Finished.
 :End
