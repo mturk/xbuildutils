@@ -15,7 +15,7 @@ rem
 rem
 set "VSCMD_VER=17.4.1"
 set "VCToolsVersion=14.34.31933"
-set "WindowsSdkVersion=10.0.19041.0"
+set "WindowsSdkVersion=10.0.22000.0"
 rem
 set "_ToolsPath=C:\Tools"
 set "_UtilsPath=C:\Utils"
@@ -24,7 +24,7 @@ set "_NasmVersion=2.15.05"
 set "_PerlPath=%_UtilsPath%\perl\%_PerlVersion%\perl\bin"
 set "_NasmPath=%_UtilsPath%\nasm\%_NasmVersion%"
 rem
-set "WindowsSdkDir=%_ToolsPath%\wsdk19041"
+set "WindowsSdkDir=%_ToolsPath%\wsdk22000"
 set "VSINSTALLDIR=%_ToolsPath%\msvs2022b"
 set "VCINSTALLDIR=%VSINSTALLDIR%\VC"
 set "VCToolsInstallDir=%VCINSTALLDIR%\Tools\MSVC\%VCToolsVersion%"

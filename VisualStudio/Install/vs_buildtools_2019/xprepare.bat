@@ -43,7 +43,7 @@ set "TMP=%_WORKDIR%\%_VSINSTALLTMP%"
 pushd %_VSINSTALLTMP%
 rem
 rem Download vs_build tools
-rem https://docs.microsoft.com/en-us/visualstudio/releases/2019/history
+rem https://learn.microsoft.com/en-us/visualstudio/releases/2019/history
 rem
 curl -qkL --retry 5 --no-progress-meter -o %_MSCINSTALLER% ^
 https://download.visualstudio.microsoft.com/download/pr/8f1eb024-006a-43f6-a372-0721f71058b3/cc5cc690ac094fbfa78dfb8e40089ba52056026579e8d8dc31e95e8ea5466df5/vs_BuildTools.exe

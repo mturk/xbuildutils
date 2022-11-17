@@ -21,7 +21,7 @@ set "_WORKDIR=%cd%"
 popd
 rem
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.3.4"
+set "_VSPRODUCTBLD=17.4.1"
 set "_VSINSTALLDIR=vs2022c"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
@@ -43,7 +43,6 @@ set "TMP=%_WORKDIR%\%_VSINSTALLTMP%"
 pushd %_VSINSTALLTMP%
 rem
 rem Download bootstraper
-rem https://docs.microsoft.com/en-us/visualstudio/releases/2022/release-history
 rem
 curl -qkL --retry 5 --no-progress-meter -o %_MSCINSTALLER% ^
 https://aka.ms/vs/17/release/vs_community.exe
