@@ -73,6 +73,7 @@ rem Add additional packages
 echo.
 echo Installing additional packages
 bash.exe --login -c "%_Pacman% -Syu mingw-w64-x86_64-toolchain"
+bash.exe --login -c "%_Pacman% -Syu mingw-w64-ucrt-x86_64-toolchain"
 rem
 popd
 echo.
