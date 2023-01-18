@@ -15,7 +15,7 @@ rem
 rem Utils component versions
 rem
 set "PerlVer=5.32.1.1"
-set "NasmVer=2.15.05"
+set "NasmVer=2.16.01"
 set "CygwrunVer=1.1.7"
 set "CMakeVer=3.25.1"
 set "ClamAVVer=1.0.0"

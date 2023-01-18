@@ -17,7 +17,7 @@ rem
 set "_GITSW_VER=2.38.1"
 set "_SVNSW_VER=1.14.2"
 set "_PERLW_VER=5.32.1.1"
-set "_NASMW_VER=2.15.05"
+set "_NASMW_VER=2.16.01"
 set "_CMAKE_VER=3.25.1"
 set "_NINJA_VER=1.11.1"
 set "_CCLAM_VER=1.0.0"
