@@ -17,7 +17,7 @@
 #
 #
 
-export "VSCMD_VER=16.11.21"
+export "VSCMD_VER=16.11.23"
 export "VCToolsVersion=14.29.30133"
 export "WindowsSdkVersion=10.0.19041.0"
 
@@ -31,7 +31,7 @@ export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
 export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
 
 _PerlVersion="5.32.1.1"
-_NasmVersion="2.15.05"
+_NasmVersion="2.16.01"
 _PerlPath="$_UtilsPath/perl/$_PerlVersion/perl/bin"
 _NasmPath="$_UtilsPath/nasm/$_NasmVersion"
 
