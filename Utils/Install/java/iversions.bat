@@ -14,17 +14,20 @@ rem limitations under the License.
 rem
 rem Java versions
 rem
-set "Java8Ver=352"
-set "Java8Bld=b08"
+set "Java8Ver=362"
+set "Java8Bld=b09"
 rem
-set "Java11Ver=11.0.17"
-set "Java11Bld=8"
+set "Java11Ver=11.0.18"
+set "Java11Bld=10"
 rem
-set "Java17Ver=17.0.5"
-set "Java17Bld=8"
+set "Java17Ver=17.0.6"
+set "Java17Bld=10"
 rem
 set "Java18Ver=18.0.2.1"
 set "Java18Bld=1"
+rem
+set "Java19Ver=19.0.2"
+set "Java19Bld=7"
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
 set "_ToolsPath=%SystemDrive%\Tools"
