@@ -4,7 +4,7 @@
 
 * **curl: 7.87.0**
 
-  https://curl.se/windows/dl-7.87.0_2/curl-7.87.0_2-win64-mingw.zip
+  https://curl.se/windows/dl-7.87.0_5/curl-7.87.0_5-win64-mingw.zip
 
 * **7-Zip: 22.01**
 

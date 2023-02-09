@@ -17,7 +17,7 @@ rem
 set "PerlVer=5.32.1.1"
 set "NasmVer=2.16.01"
 set "CygwrunVer=1.1.7"
-set "CMakeVer=3.25.1"
+set "CMakeVer=3.25.2"
 set "ClamAVVer=1.0.0"
 set "ClamAVBld=1.0.0"
 set "NinjaVer=1.11.1"
