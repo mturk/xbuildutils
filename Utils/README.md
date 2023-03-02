@@ -10,13 +10,13 @@
 
   https://www.7-zip.org/a/7z2201-extra.7z
 
-* **git: 2.39.1**
+* **git: 2.39.2**
 
-  https://github.com/git-for-windows/git/releases/download/v2.39.1.windows.1/PortableGit-2.39.1-64-bit.7z.exe
+  https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/PortableGit-2.39.2-64-bit.7z.exe
 
   install:
   ```batchfile
-  start /B /MIN /WAIT PortableGit-2.39.1-64-bit.7z.exe -o "C:\Utils\git\2.39.1" -y
+  start /B /MIN /WAIT PortableGit-2.39.2-64-bit.7z.exe -o "C:\Utils\git\2.39.2" -y
   
   ```
 

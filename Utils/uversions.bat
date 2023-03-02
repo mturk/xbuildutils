@@ -14,7 +14,7 @@ rem limitations under the License.
 rem
 rem Utils component versions
 rem
-set "_GITSW_VER=2.39.1"
+set "_GITSW_VER=2.39.2"
 set "_SVNSW_VER=1.14.2"
 set "_PERLW_VER=5.32.1.1"
 set "_NASMW_VER=2.16.01"
