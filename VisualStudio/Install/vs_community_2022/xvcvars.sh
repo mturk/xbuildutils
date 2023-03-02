@@ -17,14 +17,14 @@
 #
 #
 
-export "VSCMD_VER=17.4.4"
+export "VSCMD_VER=17.5.1"
 export "VCToolsVersion=14.34.31933"
 export "WindowsSdkVersion=10.0.22000.0"
 
 _ToolsPath="/cygdrive/c/Tools"
 _UtilsPath="/cygdrive/c/Utils"
 
-export "WindowsSdkDir=$_ToolsPath/wsdk19041"
+export "WindowsSdkDir=$_ToolsPath/wsdk22000"
 export "VSINSTALLDIR=$_ToolsPath/msvs2022c"
 export "VCINSTALLDIR=$VSINSTALLDIR/VC"
 export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"

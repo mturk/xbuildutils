@@ -35,6 +35,7 @@ echo Creating Visual Studio %_VSPRODUCTVER% %_VSPRODUCTBLD% Build Tools offline 
 echo This can take a while ...
 echo.
 rem
+rd /S /Q %_VSLAYOUTDIST% 2>NUL
 rd /S /Q %_VSINSTALLTMP% 2>NUL
 md %_VSINSTALLTMP% 2>NUL
 rem
@@ -69,11 +70,13 @@ for %%i in (README.txt xinstall.bat xvcvars.bat xvcvars.sh) do (
 )
 copy /Y xresponse.json %_VSLAYOUTDIST%\%_VSINSTALLPKG%\Response.json >NUL
 rem
+if /i "x%~1" EQU "x/u" goto End
+rem
 echo Downloading latest CRT Redistributables
 curl -qkL --retry 5 --no-progress-meter -o %_VSLAYOUTDIST%\vc_redist.x64.exe https://aka.ms/vs/17/release/vc_redist.x64.exe
 curl -qkL --retry 5 --no-progress-meter -o %_VSLAYOUTDIST%\vc_redist.x86.exe https://aka.ms/vs/17/release/vc_redist.x86.exe
 rem
-if /i "x%~1" EQU "x/b" goto End
+if /i "x%~1" NEQ "x/d" goto End
 rem
 rem ping -n 6 localhost >NUL 2>&1
 echo.
