@@ -14,7 +14,7 @@ rem limitations under the License.
 rem
 rem
 set "VSCMD_VER=17.5.1"
-set "VCToolsVersion=14.34.31933"
+set "VCToolsVersion=14.35.32215"
 set "WindowsSdkVersion=10.0.22000.0"
 rem
 set "_ToolsPath=C:\Tools"

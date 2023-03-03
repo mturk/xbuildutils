@@ -18,7 +18,7 @@
 #
 
 export "VSCMD_VER=17.5.1"
-export "VCToolsVersion=14.34.31933"
+export "VCToolsVersion=14.35.32215"
 export "WindowsSdkVersion=10.0.22000.0"
 
 _ToolsPath="/cygdrive/c/Tools"
