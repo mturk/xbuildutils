@@ -13,7 +13,7 @@ rem WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
-rem Create offline Installer for Visual Studio 2019 Build Tools
+rem Create offline Installer for Visual Studio 2017 Build Tools
 rem
 rem
 pushd %~dp0

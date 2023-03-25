@@ -17,18 +17,18 @@
 #
 #
 
-export "VSCMD_VER=16.11.25"
-export "VCToolsVersion=14.29.30133"
-export "WindowsSdkVersion=10.0.19041.0"
+export "VSCMD_VER=15.9.53"
+export "VCToolsVersion=14.16.27023"
+export "WindowsSdkVersion=10.0.17763.0"
 
 _ToolsPath="/cygdrive/c/Tools"
 _UtilsPath="/cygdrive/c/Utils"
 
 export "WindowsSdkDir=$_ToolsPath/wsdk22000"
-export "VSINSTALLDIR=$_ToolsPath/msvs2019b"
+export "VSINSTALLDIR=$_ToolsPath/msvs2017b"
 export "VCINSTALLDIR=$VSINSTALLDIR/VC"
 export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
-export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
+export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/14.16.27012"
 
 _PerlVersion="5.32.1.1"
 _NasmVersion="2.16.01"
@@ -40,8 +40,8 @@ export "DevEnvDir=$VSINSTALLDIR/Common7/IDE"
 export "UCRTVersion=$WindowsSdkVersion"
 export "UniversalCRTSdkDir=$WindowsSdkDir"
 export "VCIDEInstallDir=$DevEnvDir/VC"
-export "VisualStudioVersion=16.0"
-export "VS170COMNTOOLS=$VSINSTALLDIR/Common7/Tools"
+export "VisualStudioVersion=15.0"
+export "VS150COMNTOOLS=$VSINSTALLDIR/Common7/Tools"
 export "VSCMD_ARG_app_plat=Desktop"
 export "VSCMD_ARG_HOST_ARCH=x64"
 export "VSCMD_ARG_TGT_ARCH=x64"
