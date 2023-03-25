@@ -21,7 +21,7 @@ set "_WORKDIR=%cd%"
 popd
 rem
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.4.5_LTSC"
+set "_VSPRODUCTBLD=17.4.6_LTSC"
 set "_VSINSTALLDIR=vs2022s"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
@@ -47,7 +47,7 @@ rem Download vs_build tools
 rem https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history
 rem
 curl -qkL --retry 5 --no-progress-meter -o %_MSCINSTALLER% ^
-https://download.visualstudio.microsoft.com/download/pr/23ed7a01-a363-4dd3-8efb-5bf5b2cd89fd/03938dc80912af7094e1f6a256b481c59822e548b3bf809cb2770c620c81d25d/vs_BuildTools.exe
+https://download.visualstudio.microsoft.com/download/pr/d1ed8638-9e88-461e-92b7-4e29cc6172c3/38b09fc09ae9e590b73ae6752a0ebfd62579798969041bd341689273b842bc10/vs_BuildTools.exe
 if not exist "%_MSCINSTALLER%" (
   echo Missing %_MSCINSTALLER%
   exit /B 1
