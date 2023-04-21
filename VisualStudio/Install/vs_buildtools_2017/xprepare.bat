@@ -21,7 +21,7 @@ set "_WORKDIR=%cd%"
 popd
 rem
 set "_VSPRODUCTVER=2017"
-set "_VSPRODUCTBLD=15.9.53"
+set "_VSPRODUCTBLD=15.9.54"
 set "_VSINSTALLDIR=vs2017b"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
@@ -48,7 +48,7 @@ rem https://community.chocolatey.org/packages/visualstudio2017buildtools#files
 rem check tools\ChocolateyInstall.ps1
 rem
 curl -qkL --retry 5 --no-progress-meter -o %_MSCINSTALLER% ^
-https://download.visualstudio.microsoft.com/download/pr/4de9b77e-bbd8-4a05-a083-662e1a187b94/618876e85bac28e6b631bd18a283cc78f3d688622c77a58390f1d6458a2b470d/vs_BuildTools.exe
+https://download.visualstudio.microsoft.com/download/pr/8850d5c5-b050-404b-aad7-32152cd2b206/692baa76bd409047e7f4f270629bfee7e2d899b5c3672c571e17a3b2e63197ca/vs_BuildTools.exe
 if not exist "%_MSCINSTALLER%" (
   echo Missing %_MSCINSTALLER%
   exit /B 1
