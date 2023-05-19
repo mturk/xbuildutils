@@ -28,7 +28,7 @@ set "WindowsSdkDir=%_ToolsPath%\wsdk22000"
 set "VSINSTALLDIR=%_ToolsPath%\msvs2022c"
 set "VCINSTALLDIR=%VSINSTALLDIR%\VC"
 set "VCToolsInstallDir=%VCINSTALLDIR%\Tools\MSVC\%VCToolsVersion%"
-set "VCToolsRedistDir=%VCINSTALLDIR%\Redist\MSVC\14.36.32532"
+set "VCToolsRedistDir=%VCINSTALLDIR%\Redist\MSVC\%VCToolsVersion%"
 rem
 set "Platform=x64"
 set "DevEnvDir=%VSINSTALLDIR%\Common7\IDE"

@@ -28,7 +28,7 @@ export "WindowsSdkDir=$_ToolsPath/wsdk22000"
 export "VSINSTALLDIR=$_ToolsPath/msvs2022c"
 export "VCINSTALLDIR=$VSINSTALLDIR/VC"
 export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
-export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/14.36.32532"
+export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
 
 _PerlVersion="5.32.1.1"
 _NasmVersion="2.16.01"
