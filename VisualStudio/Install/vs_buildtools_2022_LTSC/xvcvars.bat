@@ -13,7 +13,7 @@ rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
 rem
-set "VSCMD_VER=17.4.7"
+set "VSCMD_VER=17.6.0"
 set "VCToolsVersion=14.34.31933"
 set "WindowsSdkVersion=10.0.22000.0"
 rem
@@ -62,3 +62,6 @@ set _PerlVersion=
 set _NasmVersion=
 set _PerlPath=
 set _NasmPath=
+rem
+echo Visual Studio 2022 LTSC %VSCMD_VER% Build Tools
+echo.

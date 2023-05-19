@@ -2,7 +2,7 @@
 	"installChannelUri": ".\\ChannelManifest.json",
 	"channelUri": "C:\\VisualStudio\\Layouts\\vs2022s\\Packages\\ChannelManifest.json",
 	"installCatalogUri": ".\\Catalog.json",
-	"channelId": "VisualStudio.17.Release.LTSC.17.4",
+	"channelId": "VisualStudio.17.Release.LTSC.17.6",
 	"productId": "Microsoft.VisualStudio.Product.BuildTools",
 	"useLatestInstaller": true,
 	"add": [
