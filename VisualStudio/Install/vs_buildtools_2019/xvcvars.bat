@@ -17,6 +17,11 @@ set "VSCMD_VER=16.11.26"
 set "VCToolsVersion=14.29.30133
 set "WindowsSdkVersion=10.0.19041.0"
 rem
+echo ************************************************************************
+echo ** Microsoft Visual Studio 2019 Build Tools Command Prompt %VSCMD_VER%
+echo ************************************************************************
+echo.
+rem
 set "_ToolsPath=C:\Tools"
 set "_UtilsPath=C:\Utils"
 set "_PerlVersion=5.32.1.1"

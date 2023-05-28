@@ -17,6 +17,11 @@ set "VSCMD_VER=15.9.54"
 set "VCToolsVersion=14.16.27023"
 set "WindowsSdkVersion=10.0.17763.0"
 rem
+echo ************************************************************************
+echo ** Microsoft Visual Studio 2017 Build Tools Command Prompt %VSCMD_VER%
+echo ************************************************************************
+echo.
+rem
 set "_ToolsPath=C:\Tools"
 set "_UtilsPath=C:\Utils"
 set "_PerlVersion=5.32.1.1"

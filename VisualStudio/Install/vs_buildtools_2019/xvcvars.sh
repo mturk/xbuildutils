@@ -20,6 +20,11 @@
 export "VSCMD_VER=16.11.26"
 export "VCToolsVersion=14.29.30133"
 export "WindowsSdkVersion=10.0.19041.0"
+#
+echo *********************************************************
+echo ** Microsoft Visual Studio 2019 Build Tools $VSCMD_VER
+echo *********************************************************
+echo
 
 _ToolsPath="/cygdrive/c/Tools"
 _UtilsPath="/cygdrive/c/Utils"

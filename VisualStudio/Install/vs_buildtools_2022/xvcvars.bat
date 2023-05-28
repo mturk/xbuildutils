@@ -13,9 +13,15 @@ rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
 rem
-set "VSCMD_VER=17.6.0"
+echo2022
+set "VSCMD_VER=17.6.2"
 set "VCToolsVersion=14.36.32532"
 set "WindowsSdkVersion=10.0.22000.0"
+rem
+echo ************************************************************************
+echo ** Microsoft Visual Studio 2022 Build Tools Command Prompt %VSCMD_VER%
+echo ************************************************************************
+echo.
 rem
 set "_ToolsPath=C:\Tools"
 set "_UtilsPath=C:\Utils"

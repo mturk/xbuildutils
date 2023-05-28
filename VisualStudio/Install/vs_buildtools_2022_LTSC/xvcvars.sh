@@ -17,9 +17,14 @@
 #
 #
 
-export "VSCMD_VER=17.6.0"
+export "VSCMD_VER=17.6.2"
 export "VCToolsVersion=14.36.32532"
 export "WindowsSdkVersion=10.0.22000.0"
+#
+echo *********************************************************
+echo ** Microsoft Visual Studio 2022 Build Tools $(VSCMD_VER)_LTSC
+echo *********************************************************
+echo
 
 _ToolsPath="/cygdrive/c/Tools"
 _UtilsPath="/cygdrive/c/Utils"
