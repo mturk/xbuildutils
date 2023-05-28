@@ -13,7 +13,7 @@ rem WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
-rem Dowloads and install Msys2 ditribution
+rem Downloads and install Msys2 distribution
 rem @author Mladen Turk
 rem
 pushd %~dp0\..\..\
@@ -23,8 +23,8 @@ rem
 set "PATH=%_UtilsPath%;%PATH%"
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
 set "Msys2Name=msys2-base-x86_64"
-set "Msys2Ver=20230318"
-set "Msys2Url=https://github.com/msys2/msys2-installer/releases/download/2023-03-18"
+set "Msys2Ver=20230526"
+set "Msys2Url=https://github.com/msys2/msys2-installer/releases/download/2023-05-26"
 set "Msys2Tar=%Msys2Name%-%Msys2Ver%.tar"
 set "Msys2Arch=%Msys2Tar%.xz"
 set "Msys2Root=%SystemDrive%\msys64"
