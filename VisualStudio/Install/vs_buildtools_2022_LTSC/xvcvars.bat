@@ -68,5 +68,3 @@ set _NasmVersion=
 set _PerlPath=
 set _NasmPath=
 rem
-echo Visual Studio 2022 LTSC %VSCMD_VER% Build Tools
-echo.

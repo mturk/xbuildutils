@@ -67,6 +67,3 @@ set _PerlVersion=
 set _NasmVersion=
 set _PerlPath=
 set _NasmPath=
-rem
-echo Visual Studio 2022 %VSCMD_VER% Community
-echo.
