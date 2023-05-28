@@ -14,29 +14,13 @@ rem limitations under the License.
 rem
 rem Java versions
 rem
-set "Java8Ver=372"
-set "Java8Bld=b07"
+call getopenjdk8u.bat
 rem
-set "Java11Ver=11.0.19"
-set "Java11Bld=7"
+call getopenjdk11u.bat
 rem
-set "Java17Ver=17.0.7"
-set "Java17Bld=7"
+call getopenjdk17u.bat
 rem
-set "Java19Ver=19.0.2"
-set "Java19Bld=7"
+rem call getopenjdk19u.bat
 rem
-set "Java20Ver=20.0.1"
-set "Java20Bld=9"
+call getopenjdk20u.bat
 rem
-set "CurlOpts=-qkL --retry 5 --no-progress-meter"
-set "_InstallPath=%SystemDrive%\Tools"
-set "_InstallFile=%_InstallPath%\java\_setupenv.bat"
-rem
-if not exist "%_InstallFile%" (
-    echo @echo off >%_InstallFile%
-    echo setlocal >>%_InstallFile%
-    echo rem >>%_InstallFile%
-    echo rem set "_InstallPath=%_InstallPath%" >>%_InstallFile%
-    echo rem >>%_InstallFile%
-)

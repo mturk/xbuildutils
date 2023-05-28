@@ -44,24 +44,26 @@ exit /B 1
 rem
 :Exp
 rem
-echo. >>install.log
-echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java8% >>install.log
-md %_ToolsPath%\java >NUL 2>&1
+echo. >>%_InstallFile%
+echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java8% >>%_InstallFile%
+echo rem >>%_InstallFile%
+md %_InstallPath%\java >NUL 2>&1
 rem Remove previous stuff
-rd /S /Q %_ToolsPath%\java\%Java8Dir% 2>NUL
-pushd %_ToolsPath%\java
+rd /S /Q %_InstallPath%\java\%Java8Dir% 2>NUL
+pushd %_InstallPath%\java
 rem Uncompress
 7za x -bd %_WorkPath%\%JdkArch%
 rem
 move /Y %JdkDirName% %Java8Dir% >NUL
 popd
-echo rem Set Temurin OpenJDK 8 Environment Variables >>install.log
-echo rem set "JDK_8_HOME=%%_ToolsPath%%\java\%Java8Dir%" >>install.log
-echo rem set "JRE_8_HOME=%%_ToolsPath%%\java\%Java8Dir%\jre" >>install.log
-echo. >>install.log
-echo rem Set Temurin OpenJDK 8 System Environment Variables >>install.log
-echo rem setx JDK_8_HOME %%_ToolsPath%%\java\%Java8Dir% /M >>install.log
-echo rem setx JRE_8_HOME %%_ToolsPath%%\java\%Java8Dir%\jre/M >>install.log
+echo rem Set Temurin OpenJDK 8 Environment Variables >>%_InstallFile%
+echo rem set "JDK_8_HOME=%_InstallPath%\java\%Java8Dir%" >>%_InstallFile%
+echo rem set "JRE_8_HOME=%_InstallPath%\java\%Java8Dir%\jre" >>%_InstallFile%
+echo. >>%_InstallFile%
+echo rem Set Temurin OpenJDK 8 System Environment Variables >>%_InstallFile%
+echo rem setx JDK_8_HOME %_InstallPath%\java\%Java8Dir% /M >>%_InstallFile%
+echo rem setx JRE_8_HOME %_InstallPath%\java\%Java8Dir%\jre/M >>%_InstallFile%
+echo. >>%_InstallFile%
 echo.
 echo Finished.
 :End

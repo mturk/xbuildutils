@@ -46,12 +46,13 @@ rem
 rem
 :Exp
 rem
-echo. >>install.log
-echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java11% >>install.log
+echo. >>%_InstallFile%
+echo rem [%DATE% %TIME%] Java   : Temurin OpenJDK %Java11% >>%_InstallFile%
+echo rem >>%_InstallFile%
 rem Remove previous stuff
-rd /S /Q %_ToolsPath%\java\%Java11% 2>NUL
-md %_ToolsPath%\java\%Java11% >NUL 2>&1
-pushd %_ToolsPath%\java\%Java11%
+rd /S /Q %_InstallPath%\java\%Java11% 2>NUL
+md %_InstallPath%\java\%Java11% >NUL 2>&1
+pushd %_InstallPath%\java\%Java11%
 rem Uncompress
 7za x -bd %_WorkPath%\%JdkArch%
 7za x -bd %_WorkPath%\%JreArch%
@@ -59,16 +60,17 @@ rem
 move /Y %JdkDirName% jdk >NUL
 move /Y %JreDirName% jre  >NUL
 popd
-echo rem Set Temurin OpenJDK 11 Environment Variables >>install.log
-echo rem set "JDK_11_HOME=%%_ToolsPath%%\java\%Java11%\jdk" >>install.log
-echo rem set "JRE_11_HOME=%%_ToolsPath%%\java\%Java11%\jre" >>install.log
-echo. >>install.log
-echo rem Set Temurin OpenJDK 11 System Environment Variables >>install.log
-echo rem set "_ToolsPath=%_ToolsPath%" >>install.log
-echo rem setx JDK_11_HOME %%_ToolsPath%%\java\%Java11%\jdk /M >>install.log
-echo rem setx JRE_11_HOME %%_ToolsPath%%\java\%Java11%\jre /M >>install.log
-echo rem setx JAVA_HOME ^^%%JDK_11_HOME^^%% /M >>install.log
-echo rem setx JRE_HOME ^^%%JRE_11_HOME^^%% /M >>install.log
+echo rem Set Temurin OpenJDK 11 Environment Variables >>%_InstallFile%
+echo rem set "JDK_11_HOME=%_InstallPath%\java\%Java11%\jdk" >>%_InstallFile%
+echo rem set "JRE_11_HOME=%_InstallPath%\java\%Java11%\jre" >>%_InstallFile%
+echo. >>%_InstallFile%
+echo rem Set Temurin OpenJDK 11 System Environment Variables >>%_InstallFile%
+echo setx JDK_11_HOME %_InstallPath%\java\%Java11%\jdk /M >>%_InstallFile%
+echo setx JRE_11_HOME %_InstallPath%\java\%Java11%\jre /M >>%_InstallFile%
+echo rem >>%_InstallFile%
+echo rem setx JAVA_HOME %%%%JDK_11_HOME%%%% /M >>%_InstallFile%
+echo rem setx JRE_HOME %%%%JRE_11_HOME%%%% /M >>%_InstallFile%
+echo. >>%_InstallFile%
 
 echo.
 echo Finished.

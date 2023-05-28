@@ -43,11 +43,13 @@ rem
 7za t %JdkArch% >NUL 2>&1 || ( goto ErrArch )
 7za t %JreArch% >NUL 2>&1 || ( goto ErrArch )
 rem
-echo [%DATE% %TIME%] Java   : Temurin OpenJDK %Java19% >>install.log
+echo. >>%_InstallFile%
+echo rem [%DATE% %TIME%] Java   : Temurin OpenJDK %Java19% >>%_InstallFile%
+echo rem >>%_InstallFile%
 rem Remove previous stuff
-rd /S /Q %_ToolsPath%\java\%Java19% 2>NUL
-md %_ToolsPath%\java\%Java19% >NUL 2>&1
-pushd %_ToolsPath%\java\%Java19%
+rd /S /Q %_InstallPath%\java\%Java19% 2>NUL
+md %_InstallPath%\java\%Java19% >NUL 2>&1
+pushd %_InstallPath%\java\%Java19%
 rem Uncompress
 7za x -bd %_WorkPath%\%JdkArch%
 7za x -bd %_WorkPath%\%JreArch%
@@ -55,9 +57,17 @@ rem
 move /Y %JdkDirName% jdk >NUL
 move /Y %JreDirName% jre >NUL
 popd
-echo rem Set Temurin OpenJDK 19 Environment Variables >>install.log
-echo rem set "JDK_19_HOME=%%_ToolsPath%%\java\%Java19%\jdk" >>install.log
-echo rem set "JRE_19_HOME=%%_ToolsPath%%\java\%Java19%\jre" >>install.log
+echo rem Set Temurin OpenJDK 19 Environment Variables >>%_InstallFile%
+echo rem set "JDK_19_HOME=%_InstallPath%\java\%Java19%\jdk" >>%_InstallFile%
+echo rem set "JRE_19_HOME=%_InstallPath%\java\%Java19%\jre" >>%_InstallFile%
+echo. >>%_InstallFile%
+echo rem Set Temurin OpenJDK 19 System Environment Variables >>%_InstallFile%
+echo rem setx JDK_19_HOME %_InstallPath%\java\%Java19%\jdk /M >>%_InstallFile%
+echo rem setx JRE_19_HOME %_InstallPath%\java\%Java19%\jre /M >>%_InstallFile%
+echo rem >>%_InstallFile%
+echo rem setx JAVA_HOME %%%%JDK_19_HOME%%%% /M >>%_InstallFile%
+echo rem setx JRE_HOME %%%%JRE_19_HOME%%%% /M >>%_InstallFile%
+echo. >>%_InstallFile%
 echo.
 echo Finished.
 :End
