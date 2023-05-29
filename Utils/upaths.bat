@@ -23,8 +23,9 @@ call uversions.bat
 rem
 set "_GITSW=%_UDD%\git\%_GITSW_VER%\cmd"
 set "_SVNSW=%_UDD%\svn\%_SVNSW_VER%\bin"
+set "_CYGWR=%_UDD%\cygwrun\%_CYGWR_VER%"
 rem Add git and svn to PATH
-set "_ADDSW=%_GITSW%;%_SVNSW%"
+set "_ADDSW=%_GITSW%;%_SVNSW%;%_CYGWR%"
 if "x%~1" NEQ "x/a" goto :End
 rem
 rem Add other tools to PATH if called with /a parameter
@@ -43,6 +44,7 @@ rem Clean local variables
 set _ADDSW=
 set _GITSW=
 set _SVNSW=
+set _CYGWR=
 rem
 set _CMAKE=
 set _NINJA=
