@@ -17,11 +17,11 @@ rem
 set "PerlVer=5.32.1.1"
 set "NasmVer=2.16.01"
 set "CygwrunVer=1.2.1"
-set "CMakeVer=3.26.3"
+set "CMakeVer=3.26.4"
 set "ClamAVVer=1.1.0"
 set "ClamAVBld=1.1.0"
 set "NinjaVer=1.11.1"
-set "PortableGitVer=2.40.1"
+set "PortableGitVer=2.41.0"
 rem
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
