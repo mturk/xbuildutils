@@ -1,4 +1,4 @@
 Versions:
 
-Visual Studio: 17.6.2, LTSC-2023-05-25
+Visual Studio: 17.6.3, LTSC-2023-06-13
 Windows SDK: 10.0.22000.4
