@@ -62,7 +62,7 @@ echo rem set "JRE_8_HOME=%_InstallPath%\java\%Java8Dir%\jre" >>%_InstallFile%
 echo. >>%_InstallFile%
 echo rem Set Temurin OpenJDK 8 System Environment Variables >>%_InstallFile%
 echo rem setx JDK_8_HOME %_InstallPath%\java\%Java8Dir% /M >>%_InstallFile%
-echo rem setx JRE_8_HOME %_InstallPath%\java\%Java8Dir%\jre/M >>%_InstallFile%
+echo rem setx JRE_8_HOME %_InstallPath%\java\%Java8Dir%\jre /M >>%_InstallFile%
 echo. >>%_InstallFile%
 echo.
 echo Finished.
