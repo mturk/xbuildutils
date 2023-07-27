@@ -2,9 +2,9 @@
 
 ## Util versions:
 
-* **curl: 8.2.0**
+* **curl: 8.2.1**
 
-  https://curl.se/windows/dl-8.2.0_1/curl-8.2.0_1-win64-mingw.zip
+  https://curl.se/windows/dl-8.2.1_1/curl-8.2.1_1-win64-mingw.zip
 
 * **7-Zip: 23.01**
 
