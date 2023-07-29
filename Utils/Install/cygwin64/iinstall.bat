@@ -24,8 +24,8 @@ set "PATH=%_UtilsPath%;%PATH%"
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
 rem
 set "CYGWMIRROR=https://mirrors.kernel.org/sourceware/cygwin/"
-set "CYGWSETUPV=2.925"
-set "CYGWINDLLV=3.4.6"
+set "CYGWSETUPV=2.926"
+set "CYGWINDLLV=3.4.7"
 rem Figure out some sort of release build
 set "CYGWSETUPB=1_%RANDOM%"
 set "CYGWSETUPX=setup-x86_64-%CYGWSETUPV%.exe"
