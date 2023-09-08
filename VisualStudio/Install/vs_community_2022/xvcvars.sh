@@ -17,9 +17,9 @@
 #
 #
 
-export "VSCMD_VER=17.6.5"
-export "VCToolsVersion=14.36.32532"
-export "WindowsSdkVersion=10.0.22000.0"
+export "VSCMD_VER=17.7.3"
+export "VCToolsVersion=14.37.32822"
+export "WindowsSdkVersion=10.0.22621.0"
 #
 echo *********************************************************
 echo ** Microsoft Visual Studio 2022 Community $VSCMD_VER
@@ -33,7 +33,7 @@ export "WindowsSdkDir=$_ToolsPath/wsdk22000"
 export "VSINSTALLDIR=$_ToolsPath/msvs2022c"
 export "VCINSTALLDIR=$VSINSTALLDIR/VC"
 export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
-export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
+export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/14.36.32532"
 
 _PerlVersion="5.32.1.1"
 _NasmVersion="2.16.01"
