@@ -24,12 +24,12 @@ popd
 rem Get versions
 call %_WorkPath%\iversions.bat
 rem
-set "GitName=PortableGit-%PortableGitVer%.3-64-bit"
+set "GitName=PortableGit-%PortableGitVer%.2-64-bit"
 set "GitArch=%GitName%.7z.exe"
 if not exist "%GitArch%" (
     echo.
     echo Downloading %GitArch% ...
-    curl %CurlOpts% -o %GitArch% https://github.com/git-for-windows/git/releases/download/v%PortableGitVer%.windows.3/%GitArch%
+    curl %CurlOpts% -o %GitArch% https://github.com/git-for-windows/git/releases/download/v%PortableGitVer%.windows.2/%GitArch%
 )
 rem
 rem
