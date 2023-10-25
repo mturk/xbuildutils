@@ -1,4 +1,4 @@
 Versions:
 
-Visual Studio: 17.7.4
+Visual Studio: 17.7.6
 Windows SDK: 10.0.22000.4
