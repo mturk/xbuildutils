@@ -25,10 +25,11 @@ rem Get versions
 call %_WorkPath%\iversions.bat
 set "Java17=%Java17Ver%_%Java17Bld%"
 set "JdkDirName=jdk-%Java17Ver%+%Java17Bld%"
+set "JdkUrlName=jdk-%Java17Ver%+%Java17Rel%"
 set "JreDirName=%JdkDirName%-jre"
 set "JdkArch=OpenJDK17U-jdk_x64_windows_hotspot_%Java17%.zip"
 set "JreArch=OpenJDK17U-jre_x64_windows_hotspot_%Java17%.zip"
-set "UrlBase=https://github.com/adoptium/temurin17-binaries/releases/download/%JdkDirName%"
+set "UrlBase=https://github.com/adoptium/temurin17-binaries/releases/download/%JdkUrlName%"
 rem
 echo Installing Temurin OpenJDK-%Java17% ...
 rem
@@ -66,8 +67,9 @@ echo. >>%_InstallFile%
 echo rem Set Temurin OpenJDK 17 System Environment Variables >>%_InstallFile%
 echo setx JDK_17_HOME %_InstallPath%\java\%Java17%\jdk /M >>%_InstallFile%
 echo setx JRE_17_HOME %_InstallPath%\java\%Java17%\jre /M >>%_InstallFile%
-echo rem setx JAVA_HOME %%%%JDK_17_HOME%echo rem >>%_InstallFile%
-%%% /M >>%_InstallFile%
+echo rem setx JAVA_HOME %%%%JDK_17_HOME%
+echo rem >>%_InstallFile%
+echo rem setx JAVA_HOME %%%%JDK_17_HOME%%%% /M >>%_InstallFile%
 echo rem setx JRE_HOME %%%%JRE_17_HOME%%%% /M >>%_InstallFile%
 echo. >>%_InstallFile%
 echo.
