@@ -4,7 +4,7 @@
 
 * **curl: 8.4.0**
 
-  https://curl.se/windows/dl-8.4.0_4/curl-8.4.0_4-win64-mingw.zip
+  https://curl.se/windows/dl-8.4.0_6/curl-8.4.0_6-win64-mingw.zip
 
 * **7-Zip: 23.01**
 
