@@ -13,8 +13,8 @@ rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
 rem
-set "VSCMD_VER=17.7.4"
-set "VCToolsVersion=14.37.32822"
+set "VSCMD_VER=17.8.0"
+set "VCToolsVersion=14.38.33130"
 set "WindowsSdkVersion=10.0.22621.0"
 rem
 echo ************************************************************************
@@ -24,7 +24,7 @@ echo.
 rem
 set "_ToolsPath=C:\Tools"
 set "_UtilsPath=C:\Utils"
-set "_PerlVersion=5.32.1.1"
+set "_PerlVersion=5.38.0.1"
 set "_NasmVersion=2.16.01"
 set "_PerlPath=%_UtilsPath%\perl\%_PerlVersion%\perl\bin"
 set "_NasmPath=%_UtilsPath%\nasm\%_NasmVersion%"
@@ -33,7 +33,7 @@ set "WindowsSdkDir=%_ToolsPath%\wsdk22000"
 set "VSINSTALLDIR=%_ToolsPath%\msvs2022c"
 set "VCINSTALLDIR=%VSINSTALLDIR%\VC"
 set "VCToolsInstallDir=%VCINSTALLDIR%\Tools\MSVC\%VCToolsVersion%"
-set "VCToolsRedistDir=%VCINSTALLDIR%\Redist\MSVC\14.36.32532"
+set "VCToolsRedistDir=%VCINSTALLDIR%\Redist\MSVC\%VCToolsVersion%"
 rem
 set "Platform=x64"
 set "DevEnvDir=%VSINSTALLDIR%\Common7\IDE"
