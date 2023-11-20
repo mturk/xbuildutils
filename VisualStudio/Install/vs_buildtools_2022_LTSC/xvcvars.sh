@@ -17,7 +17,7 @@
 #
 #
 
-export "VSCMD_VER=17.6.9"
+export "VSCMD_VER=17.8.0"
 export "VCToolsVersion=14.36.32532"
 export "WindowsSdkVersion=10.0.22000.0"
 #

@@ -1,4 +1,4 @@
 Versions:
 
-Visual Studio Community 2022: 17.7.4
+Visual Studio Community 2023: 17.8.0
 Windows SDK: 10.0.22621.4
