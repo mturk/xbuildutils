@@ -14,7 +14,7 @@ rem limitations under the License.
 rem
 rem
 set "VSCMD_VER=17.8.0"
-set "VCToolsVersion=14.37.32822"
+set "VCToolsVersion=14.38.33130"
 set "WindowsSdkVersion=10.0.22621.0"
 rem
 echo ************************************************************************
@@ -33,7 +33,7 @@ set "WindowsSdkDir=%_ToolsPath%\wsdk22000"
 set "VSINSTALLDIR=%_ToolsPath%\msvs2022b"
 set "VCINSTALLDIR=%VSINSTALLDIR%\VC"
 set "VCToolsInstallDir=%VCINSTALLDIR%\Tools\MSVC\%VCToolsVersion%"
-set "VCToolsRedistDir=%VCINSTALLDIR%\Redist\MSVC\14.36.32532"
+set "VCToolsRedistDir=%VCINSTALLDIR%\Redist\MSVC\%VCToolsVersion%"
 rem
 set "Platform=x64"
 set "DevEnvDir=%VSINSTALLDIR%\Common7\IDE"

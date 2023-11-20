@@ -18,7 +18,7 @@
 #
 
 export "VSCMD_VER=17.8.0"
-export "VCToolsVersion=14.37.32822"
+export "VCToolsVersion=14.38.33130"
 export "WindowsSdkVersion=10.0.22621.0"
 #
 echo *********************************************************
@@ -33,7 +33,8 @@ export "WindowsSdkDir=$_ToolsPath/wsdk22000"
 export "VSINSTALLDIR=$_ToolsPath/msvs2022b"
 export "VCINSTALLDIR=$VSINSTALLDIR/VC"
 export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
-export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/14.36.32532"
+export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
+export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
 
 _PerlVersion="5.32.1.1"
 _NasmVersion="2.16.01"
