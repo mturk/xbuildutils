@@ -22,7 +22,7 @@ set "CMakeVer=3.27.8"
 set "ClamAVVer=1.2.1"
 set "ClamAVBld=1.2.1"
 set "NinjaVer=1.11.1"
-set "PortableGitVer=2.42.0"
+set "PortableGitVer=2.43.0"
 rem
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
