@@ -13,7 +13,7 @@ rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
 rem
-set "VSCMD_VER=17.8.0"
+set "VSCMD_VER=17.8.3"
 set "VCToolsVersion=14.38.33130"
 set "WindowsSdkVersion=10.0.22621.0"
 rem
@@ -24,7 +24,7 @@ echo.
 rem
 set "_ToolsPath=C:\Tools"
 set "_UtilsPath=C:\Utils"
-set "_PerlVersion=5.38.0.1"
+set "_PerlVersion=5.38.2.2"
 set "_NasmVersion=2.16.01"
 set "_PerlPath=%_UtilsPath%\perl\%_PerlVersion%\perl\bin"
 set "_NasmPath=%_UtilsPath%\nasm\%_NasmVersion%"
