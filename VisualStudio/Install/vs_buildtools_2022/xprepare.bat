@@ -47,7 +47,7 @@ rem Download vs_build tools
 rem https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history
 rem
 curl -qkL --retry 5 --no-progress-meter -o %_MSCINSTALLER% ^
-https://download.visualstudio.microsoft.com/download/pr/63b5064f-af60-4cbe-96cd-a9dd9d41ee3d/e9f661da895b50fda33e443a383f346f37deac72c2da6f9fc79f53c1c009f0a1/vs_BuildTools.exe
+https://download.visualstudio.microsoft.com/download/pr/94f523ce-4fb4-4d35-83ec-e749572654de/76d0d613c27a1e2d1499db25e125765c63349c60ab84a0121960e879cd7cd955/vs_BuildTools.exe
 if not exist "%_MSCINSTALLER%" (
   echo Missing %_MSCINSTALLER%
   exit /B 1
