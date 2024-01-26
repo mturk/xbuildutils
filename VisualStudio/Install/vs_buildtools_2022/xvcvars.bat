@@ -24,7 +24,7 @@ echo.
 rem
 set "_ToolsPath=C:\Tools"
 set "_UtilsPath=C:\Utils"
-set "_PerlVersion=5.38.2.2"
+set "_PerlVersion=5.38.0.1"
 set "_NasmVersion=2.16.01"
 set "_PerlPath=%_UtilsPath%\perl\%_PerlVersion%\perl\bin"
 set "_NasmPath=%_UtilsPath%\nasm\%_NasmVersion%"

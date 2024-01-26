@@ -36,7 +36,7 @@ export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
 export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
 export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
 
-_PerlVersion="5.38.2.2"
+_PerlVersion="5.38.0.1"
 _NasmVersion="2.16.01"
 _PerlPath="$_UtilsPath/perl/$_PerlVersion/perl/bin"
 _NasmPath="$_UtilsPath/nasm/$_NasmVersion"

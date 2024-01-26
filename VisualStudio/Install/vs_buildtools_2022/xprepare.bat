@@ -21,7 +21,7 @@ set "_WORKDIR=%cd%"
 popd
 rem
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.8.3"
+set "_VSPRODUCTBLD=17.8.5"
 set "_VSINSTALLDIR=vs2022b"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"

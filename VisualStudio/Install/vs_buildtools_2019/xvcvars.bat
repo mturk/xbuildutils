@@ -15,7 +15,7 @@ rem
 rem
 set "VSCMD_VER=16.11.33"
 set "VCToolsVersion=14.29.30133
-set "WindowsSdkVersion=10.0.19041.0"
+set "WindowsSdkVersion=10.0.22621.0"
 rem
 echo ************************************************************************
 echo ** Microsoft Visual Studio 2019 Build Tools Command Prompt %VSCMD_VER%
