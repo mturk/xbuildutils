@@ -10,6 +10,6 @@
 
   https://www.7-zip.org/a/7z2301-extra.7z
 
-* **subversion: 1.14.2**
+* **subversion: 1.14.3**
 
-  https://www.visualsvn.com/files/Apache-Subversion-1.14.2-2.zip
+  https://www.visualsvn.com/files/Apache-Subversion-1.14.3.zip

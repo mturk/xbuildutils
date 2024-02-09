@@ -23,20 +23,20 @@ call uversions.bat
 rem
 set "_GITSW=%_UDD%\git\%_GITSW_VER%\cmd"
 set "_SVNSW=%_UDD%\svn\%_SVNSW_VER%\bin"
-set "_CYGWR=%_UDD%\cygwrun\%_CYGWR_VER%"
 rem Add git and svn to PATH
-set "_ADDSW=%_GITSW%;%_SVNSW%;%_CYGWR%"
+set "_ADDSW=%_GITSW%;%_SVNSW%"
 if "x%~1" NEQ "x/a" goto :End
 rem
 rem Add other tools to PATH if called with /a parameter
 rem
 set "_CMAKE=%_UDD%\cmake\%_CMAKE_VER%\bin"
+set "_CYGWR=%_UDD%\cygwrun\%_CYGWR_VER%"
 set "_NINJA=%_UDD%\ninja\%_NINJA_VER%"
 set "_NASMW=%_UDD%\nasm\%_NASMW_VER%"
 set "_PERLW=%_UDD%\perl\%_PERLW_VER%\perl\bin"
 set "_CCLAM=%_UDD%\clamav\%_CCLAM_VER%"
 rem
-set "_ADDSW=%_ADDSW%;%_CMAKE%;%_NINJA%;%_NASMW%;%_PERLW%;%_CCLAM%"
+set "_ADDSW=%_ADDSW%;%_CMAKE%;%_NINJA%;%_NASMW%;%_PERLW%;%_CYGWR%;%_CCLAM%"
 rem
 :End
 set "PATH=%_ADDSW%;%PATH%"

@@ -15,7 +15,7 @@ rem
 rem Utils component versions
 rem
 set "_GITSW_VER=2.43.0"
-set "_SVNSW_VER=1.14.2"
+set "_SVNSW_VER=1.14.3"
 set "_PERLW_VER=5.38.0.1"
 set "_NASMW_VER=2.16.01"
 set "_CMAKE_VER=3.28.1"
