@@ -25,10 +25,11 @@ rem Get versions
 call %_WorkPath%\iversions.bat
 set "Java11=%Java11Ver%_%Java11Bld%"
 set "JdkDirName=jdk-%Java11Ver%+%Java11Bld%"
+set "JdkUrlName=jdk-%Java11Ver%+%Java11Rel%"
 set "JreDirName=%JdkDirName%-jre"
 set "JdkArch=OpenJDK11U-jdk_x64_windows_hotspot_%Java11%.zip"
 set "JreArch=OpenJDK11U-jre_x64_windows_hotspot_%Java11%.zip"
-set "UrlBase=https://github.com/adoptium/temurin11-binaries/releases/download/%JdkDirName%"
+set "UrlBase=https://github.com/adoptium/temurin11-binaries/releases/download/%JdkUrlName%"
 rem
 echo Installing Temurin OpenJDK-%Java11% ...
 rem

@@ -14,15 +14,16 @@ rem limitations under the License.
 rem
 rem Java versions
 rem
-set "Java8Ver=392"
-set "Java8Bld=b08"
+set "Java8Ver=402"
+set "Java8Bld=b06"
 rem
-set "Java11Ver=11.0.21"
-set "Java11Bld=9"
+set "Java11Ver=11.0.22"
+set "Java11Bld=7"
+set "Java11Rel=7"
 rem
-set "Java17Ver=17.0.9"
-set "Java17Bld=9"
-set "Java17Rel=9.1"
+set "Java17Ver=17.0.10"
+set "Java17Bld=7"
+set "Java17Rel=7"
 rem
 set "Java19Ver=19.0.2"
 set "Java19Bld=7"
