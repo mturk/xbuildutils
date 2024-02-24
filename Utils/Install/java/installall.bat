@@ -22,5 +22,7 @@ call getopenjdk17u.bat
 rem
 rem call getopenjdk19u.bat
 rem
-call getopenjdk20u.bat
+rem call getopenjdk20u.bat
+rem
+call getopenjdk21u.bat
 rem

@@ -31,6 +31,9 @@ rem
 set "Java20Ver=20.0.2"
 set "Java20Bld=9"
 rem
+set "Java21Ver=21.0.2"
+set "Java21Bld=13"
+rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
 set "_InstallPath=%SystemDrive%\Tools"
 set "_InstallFile=%_InstallPath%\java\_setupenv.bat"
