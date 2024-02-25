@@ -14,15 +14,15 @@ rem limitations under the License.
 rem
 rem Utils component versions
 rem
-set "PerlVer=5.38.0.1"
-set "PerlBld=SP_5380_5361"
+set "PerlVer=5.38.2.2"
+set "PerlBld=SP_53822_64bit"
 set "NasmVer=2.16.01"
 set "CygwrunVer=1.2.1"
-set "CMakeVer=3.28.1"
-set "ClamAVVer=1.2.1"
-set "ClamAVBld=1.2.1"
+set "CMakeVer=3.28.3"
+set "ClamAVVer=1.3.0"
+set "ClamAVBld=1.3.0"
 set "NinjaVer=1.11.1"
-set "PortableGitVer=2.43.0"
+set "PortableGitVer=2.44.0"
 rem
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"

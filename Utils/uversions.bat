@@ -14,11 +14,11 @@ rem limitations under the License.
 rem
 rem Utils component versions
 rem
-set "_GITSW_VER=2.43.0"
+set "_GITSW_VER=2.44.0"
 set "_SVNSW_VER=1.14.3"
-set "_PERLW_VER=5.38.0.1"
+set "_PERLW_VER=5.38.2.2"
 set "_NASMW_VER=2.16.01"
-set "_CMAKE_VER=3.28.1"
+set "_CMAKE_VER=3.28.3"
 set "_NINJA_VER=1.11.1"
-set "_CCLAM_VER=1.2.1"
+set "_CCLAM_VER=1.3.0"
 set "_CYGWR_VER=1.2.1"
