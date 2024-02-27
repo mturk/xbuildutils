@@ -19,7 +19,7 @@
 
 export "VSCMD_VER=16.11.34"
 export "VCToolsVersion=14.29.30133"
-export "WindowsSdkVersion=10.0.22621.0"
+export "WindowsSdkVersion=10.0.19041.0"
 #
 echo *********************************************************
 echo ** Microsoft Visual Studio 2019 Build Tools $VSCMD_VER
