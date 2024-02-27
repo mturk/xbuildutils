@@ -17,7 +17,7 @@
 #
 #
 
-export "VSCMD_VER=17.8.6"
+export "VSCMD_VER=17.9.2"
 export "VCToolsVersion=14.38.33130"
 export "WindowsSdkVersion=10.0.22621.0"
 #
@@ -35,11 +35,6 @@ export "VCINSTALLDIR=$VSINSTALLDIR/VC"
 export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
 export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
 export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/14.38.33135"
-
-_PerlVersion="5.38.0.1"
-_NasmVersion="2.16.01"
-_PerlPath="$_UtilsPath/perl/$_PerlVersion/perl/bin"
-_NasmPath="$_UtilsPath/nasm/$_NasmVersion"
 
 export "Platform=x64"
 export "DevEnvDir=$VSINSTALLDIR/Common7/IDE"
@@ -63,4 +58,4 @@ export "INCLUDE=$VCToolsInstallDir/include:$WindowsSdkVerIncPath/ucrt:$WindowsSd
 export "LIB=$VCToolsInstallDir/lib/x64:$WindowsSdkVerLibPath/ucrt/x64:$WindowsSdkVerLibPath/um/x64"
 export "LIBPATH=$VCToolsInstallDir/lib/x64:$VCToolsInstallDir/lib/x86/store/references:$WindowsLibPath"
 _VsCmdPath="$VCToolsInstallDir/bin/HostX64/x64:$VSINSTALLDIR/MSBuild/Current/bin/Roslyn:$WindowsSdkVerBinPath/x64:$WindowsSdkBinPath/x64:$VSINSTALLDIR/MSBuild/Current/Bin/amd64"
-export "PATH=$_UtilsPath:$_PerlPath:$_NasmPath:$_VsCmdPath:$PATH"
+export "PATH=$_UtilsPath:$_VsCmdPath:$PATH"

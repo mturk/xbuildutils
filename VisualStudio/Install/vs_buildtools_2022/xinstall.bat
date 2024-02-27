@@ -25,7 +25,7 @@ popd
 rem
 set "_DESTDIR=C:\Tools"
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.8.6"
+set "_VSPRODUCTBLD=17.9.2"
 set "_VSINSTALLDIR=msvs2022b"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"

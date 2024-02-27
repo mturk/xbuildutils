@@ -84,7 +84,7 @@ rem ping -n 6 localhost >NUL 2>&1
 echo.
 echo Creating Visual Studio %_VSINSTALLOUT% Build Tools offline archive
 echo This can take a while ...
-rem Use Windows BSD tar
+rem Use 7z
 7za a -bd visualstudio_%_VSPRODUCTVER%_layout.7z %_VSLAYOUTROOT%
 rem
 :End

@@ -21,13 +21,14 @@ set "_WORKDIR=%cd%"
 popd
 rem
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.8.6"
+set "_VSPRODUCTBLD=17.9.2"
 set "_VSINSTALLDIR=vs2022b"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
 set "_MSCINSTALLER=vs_buildtools.exe"
 set "_VSINSTALLOUT=vs_buildtools_%_VSPRODUCTVER%_%_VSPRODUCTBLD%"
-set "_VSLAYOUTBASE=C:\VisualStudio\Layouts"
+set "_VSLAYOUTROOT=C:\VisualStudio"
+set "_VSLAYOUTBASE=%_VSLAYOUTROOT%\Layouts"
 set "_VSLAYOUTDIST=%_VSLAYOUTBASE%\%_VSINSTALLDIR%"
 rem
 echo.
@@ -47,7 +48,8 @@ rem Download vs_build tools
 rem https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history
 rem
 curl -qkL --retry 5 --no-progress-meter -o %_MSCINSTALLER% ^
-https://download.visualstudio.microsoft.com/download/pr/5bebe58c-9308-4a5b-9696-b6f84e90a32e/b10fa177f8134e8f9f5655270357e360196c546dc83c6627d8577b2ad6760dec/vs_BuildTools.exe
+https://download.visualstudio.microsoft.com/download/pr/5e7b923b-7d89-4e14-95b8-a84ab168e243/96b21d216c7954aaf606c6d7ba59a3de991884a8a86c578c767ba349c23188a9/vs_BuildTools.exe
+
 if not exist "%_MSCINSTALLER%" (
   echo Missing %_MSCINSTALLER%
   exit /B 1
@@ -80,10 +82,10 @@ if /i "x%~1" NEQ "x/d" goto End
 rem
 rem ping -n 6 localhost >NUL 2>&1
 echo.
-echo Creating Visual Studio %_VSINSTALLOUT% Build Tools offline tar archive
+echo Creating Visual Studio %_VSINSTALLOUT% Build Tools offline archive
 echo This can take a while ...
-rem Use Windows BSD tar
-%SystemRoot%\System32\tar.exe -cf %_VSLAYOUTBASE%\%_VSINSTALLOUT%.tar %_VSLAYOUTDIST%
+rem Use 7z
+7za a -bd visualstudio_%_VSPRODUCTVER%_layout.7z %_VSLAYOUTROOT%
 rem
 :End
 echo.
