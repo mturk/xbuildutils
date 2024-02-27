@@ -27,7 +27,8 @@ set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
 set "_MSCINSTALLER=vs_buildtools.exe"
 set "_VSINSTALLOUT=vs_buildtools_%_VSPRODUCTVER%_%_VSPRODUCTBLD%"
-set "_VSLAYOUTBASE=C:\VisualStudio\Layouts"
+set "_VSLAYOUTROOT=C:\VisualStudio"
+set "_VSLAYOUTBASE=%_VSLAYOUTROOT%\Layouts"
 set "_VSLAYOUTDIST=%_VSLAYOUTBASE%\%_VSINSTALLDIR%"
 rem
 echo.
@@ -81,10 +82,10 @@ if /i "x%~1" NEQ "x/d" goto End
 rem
 rem ping -n 6 localhost >NUL 2>&1
 echo.
-echo Creating Visual Studio %_VSINSTALLOUT% Build Tools offline tar archive
+echo Creating Visual Studio %_VSINSTALLOUT% Build Tools offline archive
 echo This can take a while ...
 rem Use Windows BSD tar
-%SystemRoot%\System32\tar.exe -cf %_VSLAYOUTBASE%\%_VSINSTALLOUT%.tar %_VSLAYOUTDIST%
+7za a -bd visualstudio_%_VSPRODUCTVER%_layout.7z %_VSLAYOUTROOT%
 rem
 :End
 echo.
