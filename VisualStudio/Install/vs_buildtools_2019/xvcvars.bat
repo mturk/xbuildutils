@@ -13,7 +13,7 @@ rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
 rem
-set "VSCMD_VER=16.11.33"
+set "VSCMD_VER=16.11.34"
 set "VCToolsVersion=14.29.30133
 set "WindowsSdkVersion=10.0.22621.0"
 rem
@@ -24,10 +24,6 @@ echo.
 rem
 set "_ToolsPath=C:\Tools"
 set "_UtilsPath=C:\Utils"
-set "_PerlVersion=5.38.0.1"
-set "_NasmVersion=2.16.01"
-set "_PerlPath=%_UtilsPath%\perl\%_PerlVersion%\perl\bin"
-set "_NasmPath=%_UtilsPath%\nasm\%_NasmVersion%"
 rem
 set "WindowsSdkDir=%_ToolsPath%\wsdk22000"
 set "VSINSTALLDIR=%_ToolsPath%\msvs2019b"
@@ -57,13 +53,9 @@ set "INCLUDE=%VCToolsInstallDir%\include;%WindowsSdkVerIncPath%\ucrt;%WindowsSdk
 set "LIB=%VCToolsInstallDir%\lib\x64;%WindowsSdkVerLibPath%\ucrt\x64;%WindowsSdkVerLibPath%\um\x64"
 set "LIBPATH=%VCToolsInstallDir%\lib\x64;%VCToolsInstallDir%\lib\x86\store\references;%WindowsLibPath%"
 set "_VisualStudioPath=%VCToolsInstallDir%\bin\HostX64\x64;%VSINSTALLDIR%\MSBuild\Current\bin\Roslyn;%WindowsSdkVerBinPath%\x64;%WindowsSdkBinPath%\x64;%VSINSTALLDIR%\MSBuild\Current\Bin\amd64"
-set "PATH=%_UtilsPath%;%_PerlPath%;%_NasmPath%;%_VisualStudioPath%;%PATH%"
+set "PATH=%_UtilsPath%;%_VisualStudioPath%;%PATH%"
 rem
 rem Remove private variables
 set _VisualStudioPath=
 set _ToolsPath=
 set _UtilsPath=
-set _PerlVersion=
-set _NasmVersion=
-set _PerlPath=
-set _NasmPath=
