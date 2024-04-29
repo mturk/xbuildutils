@@ -16,12 +16,12 @@ rem Utils component versions
 rem
 set "PerlVer=5.38.2.2"
 set "PerlBld=SP_53822_64bit"
-set "NasmVer=2.16.01"
+set "NasmVer=2.16.03"
 set "CygwrunVer=1.2.2"
-set "CMakeVer=3.28.3"
+set "CMakeVer=3.29.2"
 set "ClamAVVer=1.3.0"
 set "ClamAVBld=1.3.0"
-set "NinjaVer=1.11.1"
+set "NinjaVer=1.12.0"
 set "PortableGitVer=2.44.0"
 rem
 rem

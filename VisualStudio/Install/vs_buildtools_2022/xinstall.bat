@@ -25,13 +25,13 @@ popd
 rem
 set "_DESTDIR=C:\Tools"
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.9.2"
+set "_VSPRODUCTBLD=17.9.6"
 set "_VSINSTALLDIR=msvs2022b"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
 set "_MSCINSTALLER=vs_buildtools.exe"
-set "_SDKBASEDIR=Win11SDK_10.0.22621,version=10.0.22621.5,productarch=neutral"
-set "_SDKPRODUCTWVER=10.0.22621.5"
+set "_SDKBASEDIR=Win11SDK_10.0.22621,version=10.0.22621.6,productarch=neutral"
+set "_SDKPRODUCTWVER=10.0.22621.6"
 set "_SDKPRODUCTNAME=22000"
 set "_SKDINSTALLDIR=wsdk%_SDKPRODUCTNAME%"
 rem
