@@ -21,7 +21,7 @@ set "_WORKDIR=%cd%"
 popd
 rem
 set "_VSPRODUCTVER=2019"
-set "_VSPRODUCTBLD=16.11.35"
+set "_VSPRODUCTBLD=16.11.38"
 set "_VSINSTALLDIR=vs2019b"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
@@ -48,7 +48,7 @@ rem Download vs_build tools
 rem https://learn.microsoft.com/en-us/visualstudio/releases/2019/history
 rem
 curl -qkL --retry 5 --no-progress-meter -o %_MSCINSTALLER% ^
-https://download.visualstudio.microsoft.com/download/pr/4f765eb7-6d6e-4c22-865e-111a0166d32f/88b9e53174d2b281d2e98954791a99763761089aa523605b55a47d0c23af3517/vs_BuildTools.exe
+https://download.visualstudio.microsoft.com/download/pr/93f24e82-778c-46ae-92f9-8d3010ecd011/11a249bf18005c77bf5bec6618438185b4c7c8b3114764e0ed93137011ad7f9d/vs_BuildTools.exe
 
 if not exist "%_MSCINSTALLER%" (
   echo Missing %_MSCINSTALLER%

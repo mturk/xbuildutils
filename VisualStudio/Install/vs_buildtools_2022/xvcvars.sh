@@ -17,8 +17,8 @@
 #
 #
 
-export "VSCMD_VER=17.9.6"
-export "VCToolsVersion=14.39.33519"
+export "VSCMD_VER=17.10.4"
+export "VCToolsVersion=14.40.33807"
 export "WindowsSdkVersion=10.0.22621.0"
 #
 echo *********************************************************
@@ -34,7 +34,7 @@ export "VSINSTALLDIR=$_ToolsPath/msvs2022b"
 export "VCINSTALLDIR=$VSINSTALLDIR/VC"
 export "VCToolsInstallDir=$VCINSTALLDIR/Tools/MSVC/$VCToolsVersion"
 export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
-export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/14.38.33135"
+export "VCToolsRedistDir=$VCINSTALLDIR/Redist/MSVC/$VCToolsVersion"
 
 export "Platform=x64"
 export "DevEnvDir=$VSINSTALLDIR/Common7/IDE"
