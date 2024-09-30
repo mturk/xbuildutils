@@ -14,8 +14,8 @@ rem limitations under the License.
 rem
 rem Utils component versions
 rem
-set "PerlVer=5.38.2.2"
-set "PerlBld=SP_53822_64bit"
+set "PerlVer=5.40.0.1"
+set "PerlBld=SP_54001_64bit_UCRT"
 set "NasmVer=2.16.03"
 set "CygwrunVer=1.2.2"
 set "CMakeVer=3.29.2"
