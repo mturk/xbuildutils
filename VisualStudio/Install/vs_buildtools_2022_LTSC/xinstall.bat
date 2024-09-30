@@ -23,17 +23,16 @@ pushd %~dp0
 set "_WORKDIR=%cd%"
 popd
 rem
-set "_DESTDIR=C:\Tools"
+set "_DESTDIR=C:\xbuild"
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.10.4_LTSC"
-set "_VSINSTALLDIR=msvs2022s"
+set "_VSPRODUCTBLD=17.10.7_LTSC"
+set "_VSINSTALLDIR=msvs"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
 set "_MSCINSTALLER=vs_buildtools.exe"
-set "_SDKBASEDIR=Win11SDK_10.0.22000,version=10.0.22000.4,productarch=neutral,machinearch=x64"
-set "_SDKPRODUCTWVER=10.0.22000.4"
-set "_SDKPRODUCTNAME=22000"
-set "_SKDINSTALLDIR=wsdk%_SDKPRODUCTNAME%"
+set "_SDKBASEDIR=Win11SDK_10.0.22621,version=10.0.22621.6,productarch=neutral"
+set "_SDKPRODUCTWVER=10.0.22621.6"
+set "_SKDINSTALLDIR=wsdk"
 rem
 rd /S /Q %_VSINSTALLTMP% 2>NUL
 md %_VSINSTALLTMP% 2>NUL

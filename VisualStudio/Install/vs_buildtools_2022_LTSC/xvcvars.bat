@@ -13,24 +13,24 @@ rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
 rem
-set "VSCMD_VER=17.10.4"
-set "VCToolsVersion=14.36.32532"
-set "WindowsSdkVersion=10.0.22000.0"
+set "VSCMD_VER=17.10.7"
+set "VCToolsVersion=14.40.33807"
+set "WindowsSdkVersion=10.0.22621.0"
 rem
 echo ************************************************************************
 echo ** Microsoft Visual Studio 2022 Build Tools Command Prompt %VSCMD_VER%_LTSC
 echo ************************************************************************
 echo.
 rem
-set "_ToolsPath=C:\Tools"
-set "_UtilsPath=C:\Utils"
+set "_ToolsPath=C:\xbuild"
+set "_UtilsPath=C:\xbuild"
 set "_PerlVersion=5.38.2.2"
 set "_NasmVersion=2.16.01"
-set "_PerlPath=%_UtilsPath%\perl\%_PerlVersion%\perl\bin"
-set "_NasmPath=%_UtilsPath%\nasm\%_NasmVersion%"
+set "_PerlPath=%_UtilsPath%\perl\perl\bin"
+set "_NasmPath=%_UtilsPath%\nasm"
 rem
-set "WindowsSdkDir=%_ToolsPath%\wsdk22000"
-set "VSINSTALLDIR=%_ToolsPath%\msvs2022s"
+set "WindowsSdkDir=%_ToolsPath%\wsdk"
+set "VSINSTALLDIR=%_ToolsPath%\msvs"
 set "VCINSTALLDIR=%VSINSTALLDIR%\VC"
 set "VCToolsInstallDir=%VCINSTALLDIR%\Tools\MSVC\%VCToolsVersion%"
 set "VCToolsRedistDir=%VCINSTALLDIR%\Redist\MSVC\%VCToolsVersion%"
