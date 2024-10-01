@@ -13,7 +13,7 @@ rem WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 rem See the License for the specific language governing permissions and
 rem limitations under the License.
 rem
-rem Dowload and install Cygwin ditribution
+rem Download and install Cygwin ditribution
 rem
 rem
 pushd %~dp0\..\..\
@@ -25,7 +25,7 @@ set "CurlOpts=-qkL --retry 5 --no-progress-meter"
 rem
 set "CYGWMIRROR=https://mirrors.kernel.org/sourceware/cygwin/"
 set "CYGWSETUPV=2.932"
-set "CYGWINDLLV=3.5.3"
+set "CYGWINDLLV=3.5.4"
 rem Figure out some sort of release build
 set "CYGWSETUPB=1_%RANDOM%"
 set "CYGWSETUPX=setup-x86_64-%CYGWSETUPV%.exe"
@@ -44,6 +44,7 @@ echo Installing from local dir %CYGWINROOT%\.packages
 goto :GetCygwinSetup
 rem
 :RunUpdate
+shift
 echo Updating %CYGWINROOT%
 rem
 :GetCygwinSetup
@@ -64,9 +65,9 @@ set "P0=curl,wget,wget2,gnupg,gnupg2,inetutils"
 set "P1=diffutils,dos2unix,patch,patchutils,time,chere,cygrunsrv,attr,shutdown"
 set "P2=python2,python3,tcl,git,subversion"
 set "P3=cpio,unzip,xz,p7zip,zip,rpm,rpm-build"
-set "P4=autoconf,automake,autogen,autobuild,libtool,m4,make,makedepend"
-set "P5=bison,byacc,flex,cmake,ninja,meson"
-set "P6=mingw64-x86_64-binutils,mingw64-x86_64-gcc-core,mingw64-x86_64-headers,mingw64-x86_64-runtime"
+set "P4=gcc-core,gcc-g++,autoconf,automake,autogen,autobuild,libtool,m4,make,makedepend"
+set "P5=bison,byacc,flex,cmake,ninja,meson,w32api-headers,w32-api-runtime,windows-default-manifest"
+set "P6=mingw64-x86_64-binutils,mingw64-x86_64-gcc-core,mingw64-x86_64-gcc-g++,mingw64-x86_64-headers,mingw64-x86_64-runtime"
 rem
 set "PX=%P0%,%P1%,%P2%,%P3%,%P4%,%P5%,%P6%"
 rem
@@ -74,19 +75,12 @@ echo.
 start /B /MIN /WAIT %CYGWSETUPX% -qnoOABX%CYGWSETUPM% -l "%CYGWINROOT%\.packages" -s "%CYGWMIRROR%" -R "%CYGWINROOT%" -P "%PX%"
 popd
 rem
-if exist "%CYGWINROOT%\.iinstall\" goto :HasInstallDir
-mkdir "%CYGWINROOT%\.iinstall" >NUL
-for %%i in (bashrc fstab history iinstall.bat cygwhere.bat) do (
-  copy /Y /B %%i "%CYGWINROOT%\.iinstall\" >NUL
-)
-rem
-:HasInstallDir
 if /i "x%~1" == "x/z" goto :CreateDist
 if "%CYGWSETUPM%" NEQ "L" goto :End
-if exist "%CYGWINROOT%\etc\fstab.org" goto :End
+rem if exist "%CYGWINROOT%\etc\fstab.org" goto :End
 rem Update fstab with noacl flag set
-move /Y "%CYGWINROOT%\etc\fstab" "%CYGWINROOT%\etc\fstab.org" >NUL
-copy /Y /B fstab "%CYGWINROOT%\etc\fstab" >NUL
+rem move /Y "%CYGWINROOT%\etc\fstab" "%CYGWINROOT%\etc\fstab.org" >NUL
+rem copy /Y /B fstab "%CYGWINROOT%\etc\fstab" >NUL
 copy /Y /B history "%CYGWINROOT%\etc\skel\.bash_history" >NUL
 if /i "x%~1" == "x/b" goto :SetupBashrc
 rem
