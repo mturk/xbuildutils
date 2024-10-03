@@ -17,9 +17,9 @@ rem
 set "Java8Ver=402"
 set "Java8Bld=b06"
 rem
-set "Java11Ver=11.0.22"
-set "Java11Bld=7"
-set "Java11Rel=7"
+set "Java11Ver=11.0.24"
+set "Java11Bld=8"
+set "Java11Rel=8"
 rem
 set "Java17Ver=17.0.10"
 set "Java17Bld=7"
@@ -31,8 +31,8 @@ rem
 set "Java20Ver=20.0.2"
 set "Java20Bld=9"
 rem
-set "Java21Ver=21.0.2"
-set "Java21Bld=13"
+set "Java21Ver=21.0.4"
+set "Java21Bld=7"
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
 set "_InstallPath=%SystemDrive%\Tools"
