@@ -23,7 +23,7 @@ popd
 popd
 rem Set versions
 set "_CurlOpts=-qkL --retry 5 --no-progress-meter"
-set "_InstallPath=C:\xbuild"
+set "_InstallPath=C:\xbuildutils"
 set "Java11Ver=11.0.24"
 set "Java11Bld=8"
 set "Java11=%Java11Ver%_%Java11Bld%"

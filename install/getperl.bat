@@ -21,7 +21,7 @@ rem set "PerlVer=5.38.2.2"
 rem set "PerlBld=SP_53822_64bit"
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
-set "_UtilsPath=C:\xbuild"
+set "_UtilsPath=C:\xbuildutils"
 pushd %~dp0
 set "_WorkPath=%cd%"
 popd
@@ -42,12 +42,11 @@ exit /B 1
 rem
 :Exp
 rem
-echo [%DATE% %TIME%] Perl   : %PerlName% >>install.log
 rem Remove previous stuff
 rd /S /Q %_UtilsPath%\perl 2>NUL
 md %_UtilsPath%\perl >NUL 2>&1
-rem Uncopress
 pushd %_UtilsPath%\perl
+rem
 7za x -bd %_WorkPath%\%PerlArch%
 rem rd /S /Q c 2>NUL
 rem copy /Y /B perl\bin\perl.exe perl\bin\perlw.exe >NUL

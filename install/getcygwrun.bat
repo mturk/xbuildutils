@@ -18,7 +18,7 @@ rem
 set "CygwrunVer=2.0.0"
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
-set "_UtilsPath=C:\xbuild"
+set "_UtilsPath=C:\xbuildutils"
 pushd %~dp0
 set "_WorkPath=%cd%"
 popd
@@ -39,11 +39,10 @@ exit /B 1
 rem
 :Exp
 rem
-echo [%DATE% %TIME%] Cygwrun: %CygwrunName% >>install.log
 rem Remove previous stuff
 del /F /Q %_UtilsPath%\cygwrun.exe 2>NUL
-rem Uncopress
 pushd %_UtilsPath%
+rem
 7za x -y -bd %_WorkPath%\%CygwrunArch%
 rem
 popd

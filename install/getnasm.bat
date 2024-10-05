@@ -18,7 +18,7 @@ rem
 set "NasmVer=2.16.03"
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
-set "_UtilsPath=C:\xbuild"
+set "_UtilsPath=C:\xbuildutils"
 pushd %~dp0
 set "_WorkPath=%cd%"
 popd
@@ -39,12 +39,11 @@ exit /B 1
 rem
 :Exp
 rem
-echo [%DATE% %TIME%] Nasm   : %NasmName% >>install.log
 rem Remove previous stuff
 rd /S /Q %_UtilsPath%\nasm 2>NUL
 md %_UtilsPath% >NUL 2>&1
 pushd %_UtilsPath%
-rem Uncopress
+rem
 7za x -bd %_WorkPath%\%NasmArch%
 rem
 move /Y nasm-%NasmVer% nasm >NUL
