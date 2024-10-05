@@ -24,6 +24,7 @@ popd
 popd
 set "_CurlOpts=-qkL --retry 5 --no-progress-meter"
 rem
+set "_XbuildUtilsDir=C:\xbuildutils"
 set "_VSPRODUCTVER=2022"
 set "_VSPRODUCTBLD=17.10.7_LTSC"
 set "_VSINSTALLDIR=vs2022s"
@@ -87,9 +88,10 @@ echo Creating Visual Studio %_VSINSTALLOUT% Build Tools offline tar archive
 echo This can take a while ...
 sync64.exe -accepteula -nobanner C
 rem Use Windows BSD tar
-%SystemRoot%\System32\tar.exe -cf %_VSLAYOUTBASE%\%_VSINSTALLOUT%.tar %_VSLAYOUTDIST%
+%SystemRoot%\System32\tar.exe -cf %_VSLAYOUTBASE%\%_VSINSTALLOUT%.tar %_VSLAYOUTDIST% %_XbuildUtilsDir%
 rem
 :End
 echo.
+rd /S /Q %_VSINSTALLTMP% 2>NUL
 echo Done
 exit /B 0
