@@ -18,7 +18,7 @@ rem
 rem
 pushd %~dp0
 set "_WORKDIR=%cd%"
-pushd ..\
+pushd ..\..\utils
 set "PATH=%cd%;%PATH%"
 popd
 popd
@@ -70,9 +70,7 @@ if "%ERRORLEVEL%" NEQ "0" (
 )
 rem
 popd
-for %%i in (README.txt xinstall.bat xvcvars.bat xvcvars.sh) do (
-  copy /Y %%i %_VSLAYOUTDIST%\ >NUL
-)
+robocopy . %_VSLAYOUTDIST% README.txt xinstall.bat xvcvars.bat xvcvars.sh >NUL
 copy /Y xresponse.json %_VSLAYOUTDIST%\%_VSINSTALLPKG%\Response.json >NUL
 rem
 if /i "x%~1" EQU "x/u" goto End

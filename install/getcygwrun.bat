@@ -18,9 +18,12 @@ rem
 set "CygwrunVer=2.0.0"
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
-set "_UtilsPath=C:\xbuildutils"
+set "_XbuildUtilsDir=C:\xbuildutils"
 pushd %~dp0
 set "_WorkPath=%cd%"
+pushd ..\utils
+set "PATH=%cd%;%PATH%"
+popd
 popd
 rem
 set "CygwrunName=cygwrun-%CygwrunVer%-win-x64"
@@ -28,10 +31,10 @@ set "CygwrunArch=%CygwrunName%.zip"
 if not exist "%CygwrunArch%" (
     echo.
     echo Downloading %CygwrunArch% ...
-    curl %CurlOpts% -o %CygwrunArch% https://github.com/mturk/cygwrun/releases/download/v%CygwrunVer%/%CygwrunArch%
+    curl.exe %CurlOpts% -o %CygwrunArch% https://github.com/mturk/cygwrun/releases/download/v%CygwrunVer%/%CygwrunArch%
 )
 rem
-7za t %CygwrunArch% >NUL 2>&1 && ( goto Exp )
+7za.exe t %CygwrunArch% >NUL 2>&1 && ( goto Exp )
 echo.
 echo Failed to download %CygwrunArch%
 del /F /Q %CygwrunArch% 2>NUL
@@ -40,10 +43,10 @@ rem
 :Exp
 rem
 rem Remove previous stuff
-del /F /Q %_UtilsPath%\cygwrun.exe 2>NUL
-pushd %_UtilsPath%
+del /F /Q %_XbuildUtilsDir%\cygwrun.exe 2>NUL
+pushd %_XbuildUtilsDir%
 rem
-7za x -y -bd %_WorkPath%\%CygwrunArch%
+7za.exe x -y -bd %_WorkPath%\%CygwrunArch%
 rem
 popd
 echo.

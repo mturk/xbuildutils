@@ -18,9 +18,12 @@ rem
 set "NasmVer=2.16.03"
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
-set "_UtilsPath=C:\xbuildutils"
+set "_XbuildUtilsDir=C:\xbuildutils"
 pushd %~dp0
 set "_WorkPath=%cd%"
+pushd ..\utils
+set "PATH=%cd%;%PATH%"
+popd
 popd
 rem
 set "NasmName=nasm-%NasmVer%-win64"
@@ -28,10 +31,10 @@ set "NasmArch=%NasmName%.zip"
 if not exist "%NasmArch%" (
     echo.
     echo Downloading %NasmArch% ...
-    curl %CurlOpts% -o %NasmArch% https://www.nasm.us/pub/nasm/releasebuilds/%NasmVer%/win64/%NasmArch%
+    curl.exe %CurlOpts% -o %NasmArch% https://www.nasm.us/pub/nasm/releasebuilds/%NasmVer%/win64/%NasmArch%
 )
 rem
-7za t %NasmArch% >NUL 2>&1 && ( goto Exp )
+7za.exe t %NasmArch% >NUL 2>&1 && ( goto Exp )
 echo.
 echo Failed to download %NasmArch%
 del /F /Q %NasmArch% 2>NUL
@@ -40,11 +43,11 @@ rem
 :Exp
 rem
 rem Remove previous stuff
-rd /S /Q %_UtilsPath%\nasm 2>NUL
-md %_UtilsPath% >NUL 2>&1
-pushd %_UtilsPath%
+rd /S /Q %_XbuildUtilsDir%\nasm 2>NUL
+md %_XbuildUtilsDir% >NUL 2>&1
+pushd %_XbuildUtilsDir%
 rem
-7za x -bd %_WorkPath%\%NasmArch%
+7za.exe x -bd %_WorkPath%\%NasmArch%
 rem
 move /Y nasm-%NasmVer% nasm >NUL
 popd

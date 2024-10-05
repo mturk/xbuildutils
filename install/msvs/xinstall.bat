@@ -54,7 +54,6 @@ pushd %_VSINSTALLPKG%\%_SDKBASEDIR%
 start /wait WinSDKSetup.exe /installpath %_DESTDIR%\%_SKDINSTALLDIR% /ceip off /features OptionId.DesktopCPPx64 /q
 popd
 rem
-sync64.exe -accepteula -nobanner C
 rem
 :doVsInstall
 echo.
@@ -67,7 +66,6 @@ rem
 echo Installing Visual Studio %_VSPRODUCTVER% %_VSPRODUCTBLD% Build Tools
 echo This can take a while ...
 echo.
-rem ping -n 6 localhost >NUL 2>&1
 rem
 pushd %_VSINSTALLPKG%
 start /wait %_MSCINSTALLER% ^
@@ -80,7 +78,8 @@ if "%ERRORLEVEL%" NEQ "0" (
 )
 rem
 popd
-xcopy /I /Y /Q xvcvars.* "%_DESTDIR%\%_VSINSTALLDIR%" >NUL
+robocopy . %_DESTDIR%\%_VSINSTALLDIR% README.txt xinstall.bat xvcvars.bat xvcvars.sh >NUL
+rem
 del /Q /F "%_DESTDIR%\%_VSINSTALLDIR%\Common7\Tools\vsdevcmd\ext\team_explorer.bat" >NUL 2>&1
 rem
 if /i "x%~1" NEQ "x/r" goto End
