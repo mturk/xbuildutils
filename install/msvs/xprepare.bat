@@ -85,7 +85,7 @@ rem
 echo.
 echo Creating Visual Studio %_VSINSTALLOUT% Build Tools offline tar archive
 echo This can take a while ...
-ping -n 6 localhost >NUL 2>&1
+sync64.exe -accepteula -nobanner C
 rem Use Windows BSD tar
 %SystemRoot%\System32\tar.exe -cf %_VSLAYOUTBASE%\%_VSINSTALLOUT%.tar %_VSLAYOUTDIST%
 rem

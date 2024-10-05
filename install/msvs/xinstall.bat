@@ -1,4 +1,5 @@
 @echo off
+setlocal
 rem
 rem Licensed under the Apache License, Version 2.0 (the "License");
 rem you may not use this file except in compliance with the License.
@@ -16,14 +17,11 @@ rem
 rem Offline Installer for Visual Studio 2022 LTSC Build Tools
 rem
 rem
-rem
-setlocal
-rem
 pushd %~dp0
 set "_WORKDIR=%cd%"
 popd
 rem
-set "_DESTDIR=C:\xbuild"
+set "_DESTDIR=C:\xbuildutils"
 set "_VSPRODUCTVER=2022"
 set "_VSPRODUCTBLD=17.10.7_LTSC"
 set "_VSINSTALLDIR=msvs"
@@ -55,7 +53,8 @@ echo This can take a while ...
 pushd %_VSINSTALLPKG%\%_SDKBASEDIR%
 start /wait WinSDKSetup.exe /installpath %_DESTDIR%\%_SKDINSTALLDIR% /ceip off /features OptionId.DesktopCPPx64 /q
 popd
-rem ping -n 6 localhost >NUL 2>&1
+rem
+sync64.exe -accepteula -nobanner C
 rem
 :doVsInstall
 echo.
