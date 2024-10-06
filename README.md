@@ -100,6 +100,22 @@ setup
 
 After that, setup users, add additional packages, etc.
 
+Cygwin installer will modify '/etc/fstab' file by
+adding **noacl** option to default mount.
+This fixes the problems when using cygwin tools
+to download or copy files, which then cannot be used
+by native Windows applications.
+
+The alternative is to reset the permissions for
+each affected directory by using the following:
+
+```sh
+$ takeown /F "`cygpath -w directory`" /R /D Y > /dev/null
+$ icacls "`cygpath -w directory`" /reset /T /Q
+
+```
+
+
 # Installing Msys2
 
 Xbuildutils contains a non-interactive Msys2 installer.
