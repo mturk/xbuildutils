@@ -15,7 +15,7 @@ rem limitations under the License.
 rem
 rem Dowload and install Temurin OpenJDK8U jdk and jre
 rem
-set "JavaVersion=8"
+set "JavaVersion=08"
 set "JavaRelease=422"
 set "JavaBuild=b05"
 rem
