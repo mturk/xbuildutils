@@ -17,19 +17,20 @@ rem
 rem Offline Installer for Visual Studio 2022 LTSC Build Tools
 rem
 rem
+set "_VSPRODUCTVER=2022"
+set "_VSPRODUCTBLD=17.10.7_LTSC"
+set "_SDKBASEDIR=Win11SDK_10.0.22621,version=10.0.22621.6,productarch=neutral"
+set "_SDKPRODUCTWVER=10.0.22621.6"
+rem
 pushd %~dp0
 set "_WORKDIR=%cd%"
 popd
 rem
-set "_DESTDIR=C:\xbuildutils"
-set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.10.7_LTSC"
+set "_XbuildUtilsDir=C:\xbuildutils"
 set "_VSINSTALLDIR=msvs"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
 set "_MSCINSTALLER=vs_buildtools.exe"
-set "_SDKBASEDIR=Win11SDK_10.0.22621,version=10.0.22621.6,productarch=neutral"
-set "_SDKPRODUCTWVER=10.0.22621.6"
 set "_SKDINSTALLDIR=wsdk"
 rem
 rd /S /Q %_VSINSTALLTMP% 2>NUL
@@ -38,9 +39,8 @@ rem
 set "TEMP=%_WORKDIR%\%_VSINSTALLTMP%"
 set "TMP=%_WORKDIR%\%_VSINSTALLTMP%"
 rem
-md %_DESTDIR% 2>NUL
+md %_XbuildUtilsDir% 2>NUL
 rem
-if exist "%_DESTDIR%\%_SKDINSTALLDIR%" goto doVsInstall
 rem Install vc_redist
 echo.
 echo Installing CRT Redistributables
@@ -51,25 +51,21 @@ echo.
 echo Installing Windows SDK %_SDKPRODUCTWVER%
 echo This can take a while ...
 pushd %_VSINSTALLPKG%\%_SDKBASEDIR%
-start /wait WinSDKSetup.exe /installpath %_DESTDIR%\%_SKDINSTALLDIR% /ceip off /features OptionId.DesktopCPPx64 /q
-popd
-rem
-rem
-:doVsInstall
-echo.
-if exist "%_DESTDIR%\%_VSINSTALLDIR%\msvsvars.bat" (
-  echo Installation Error
-  echo %_DESTDIR%\%_VSINSTALLDIR% directory already exist
+start /wait WinSDKSetup.exe /installpath %_XbuildUtilsDir%\%_SKDINSTALLDIR% /ceip off /features OptionId.DesktopCPPx64 /q
+if "%ERRORLEVEL%" NEQ "0" (
+  echo WinSDKSetup.exe failed with error %ERRORLEVEL%
   exit /B 1
 )
+popd
 rem
+echo.
 echo Installing Visual Studio %_VSPRODUCTVER% %_VSPRODUCTBLD% Build Tools
 echo This can take a while ...
 echo.
 rem
 pushd %_VSINSTALLPKG%
 start /wait %_MSCINSTALLER% ^
---installPath "%_DESTDIR%\%_VSINSTALLDIR%" --locale en-US ^
+--installPath "%_XbuildUtilsDir%\%_VSINSTALLDIR%" --locale en-US ^
 --quiet --nocache --norestart --noWeb --wait >NUL
 rem
 if "%ERRORLEVEL%" NEQ "0" (
@@ -78,14 +74,8 @@ if "%ERRORLEVEL%" NEQ "0" (
 )
 rem
 popd
-robocopy . %_DESTDIR%\%_VSINSTALLDIR% README.txt msvsvars.bat msvsvars.sh >NUL
+robocopy . %_XbuildUtilsDir%\%_VSINSTALLDIR% README.txt msvsvars.bat msvsvars.sh >NUL
+del /Q /F "%_XbuildUtilsDir%\%_VSINSTALLDIR%\Common7\Tools\vsdevcmd\ext\team_explorer.bat" >NUL 2>&1
 rem
-del /Q /F "%_DESTDIR%\%_VSINSTALLDIR%\Common7\Tools\vsdevcmd\ext\team_explorer.bat" >NUL 2>&1
-rem
-if /i "x%~1" NEQ "x/r" goto End
-echo.
-shutdown /r /t 30 /c "Restart after installing Visual Studio %_VSPRODUCTVER% %_VSPRODUCTBLD% Build Tools"
-rem
-:End
 echo Done
 exit /B 0

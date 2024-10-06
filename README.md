@@ -15,13 +15,13 @@ to the xbuildutils.
 > cd install
 > xbprep.bat
 > getcygwrun.bat
-> getgit.bat
+> getgit.bat		(optional)
 > getnasm.bat
 > getperl.bat
 > cd java
-> getopenjdk8u.bat
-> getopenjdk17u.bat
-> getopenjdk21u.bat
+> getopenjdk8u.bat	(optional)
+> getopenjdk17u.bat	(optional)
+> getopenjdk21u.bat	(optional)
 > getopenjdk21u.bat /i
 > cd ..
 > cd msvs
@@ -42,7 +42,7 @@ Open the command prompt as Administrator
 > md VisualStudio
 > md xbuildutils
 > %SystemRoot%\System32\tar.exe -xf xbuildutils-prep.tar
-> cd VisualStudio\Layouts\msvs
+> cd VisualStudio\Layout\msvs
 > msvsinstall.bat
 > cd \
 > %SystemRoot%\System32\tar.exe -cf xbuildutils-dist.tar xbuildutils
