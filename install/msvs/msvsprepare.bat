@@ -33,7 +33,7 @@ set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
 set "_MSCINSTALLER=vs_buildtools.exe"
 set "_VSINSTALLOUT=vs_buildtools_%_VSPRODUCTVER%_%_VSPRODUCTBLD%"
-set "_VSLAYOUTBASE=%_XbuildUtilsDir%\layout"
+set "_VSLAYOUTBASE=%_XbuildUtilsDir%\temp"
 set "_VSLAYOUTDIST=%_VSLAYOUTBASE%\%_VSINSTALLDIR%"
 rem
 echo.

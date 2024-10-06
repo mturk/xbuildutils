@@ -46,10 +46,10 @@ Open the command prompt as Administrator
 > cd \
 > md xbuildutils
 > %SystemRoot%\System32\tar.exe -xf xbuildutils-prep.tar
-> cd xbuildutils\layout\msvs
+> cd xbuildutils\temp\msvs
 > msvsinstall.bat
 > cd \
-> rd /S /Q xbuildutils\layout
+> rd /S /Q xbuildutils\temp
 > %SystemRoot%\System32\tar.exe -cf xbuildutils-dist.tar xbuildutils
 
 ```
@@ -70,7 +70,7 @@ Open the command prompt as Administrator
 
 ```
 
-The Virtual machine now has all te tools inside xbuildutils directory
+The Virtual machine now containst all te tools inside xbuildutils directory
 
 # Installing Cygwin
 

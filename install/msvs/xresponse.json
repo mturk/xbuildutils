@@ -1,6 +1,6 @@
 {
 	"installChannelUri": ".\\ChannelManifest.json",
-	"channelUri": "C:\\xbuildutils\\layout\\msvs\\Packages\\ChannelManifest.json",
+	"channelUri": "C:\\xbuildutils\\temp\\msvs\\Packages\\ChannelManifest.json",
 	"installCatalogUri": ".\\Catalog.json",
 	"channelId": "VisualStudio.17.Release.LTSC.17.10",
 	"productId": "Microsoft.VisualStudio.Product.BuildTools",
