@@ -23,6 +23,7 @@ rem
 pushd ..\
 start /B /MIN /WAIT %CygwinSetup% -qnoOABXL -l "%CygwinRoot%\.packages" -s "%CygwinMirror%" -R "%CygwinRoot%" -P "%CygwinPackages%"
 popd
+if /i "x%~1" NEQ "x/s" goto End
 move /Y ..\etc\skel\.bashrc bashrc.org >NUL
 move /Y ..\etc\fstab fstab.org >NUL
 copy /Y /B bashrc.org+bashrc ..\etc\skel\.bashrc >NUL
