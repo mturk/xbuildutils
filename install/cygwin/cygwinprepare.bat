@@ -48,7 +48,7 @@ rem
 start /B /MIN /WAIT %CygwinSetup% -qnoOABXD -l "%CygwinRoot%\.packages" -s "%CygwinMirror%" -R "%CygwinRoot%" -P "%CygwinPackages%"
 popd
 rem
-robocopy . %CygwinRoot%\.install bashrc fstab cygwhere.bat cygwinconf.bat cygwininstall.bat >NUL
+robocopy . %CygwinRoot%\.install fstab cygwhere.bat cygwinconf.bat cygwininstall.bat >NUL
 rem
 if /i "x%~1" NEQ "x/d" goto End
 rem
