@@ -27,7 +27,7 @@ rem
 set "_XbuildUtilsDir=C:\xbuildutils"
 set "_VSPRODUCTVER=2022"
 set "_VSPRODUCTBLD=17.10.7_LTSC"
-set "_VSINSTALLDIR=vs2022s"
+set "_VSINSTALLDIR=msvs"
 set "_VSINSTALLPKG=Packages"
 set "_VSINSTALLTMP=Temp"
 set "_MSCINSTALLER=vs_buildtools.exe"

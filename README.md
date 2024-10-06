@@ -41,7 +41,7 @@ Open the command prompt as Administrator
 > md VisualStudio
 > md xbuildutils
 > %SystemRoot%\System32\tar.exe -xf xbuildutils-prep-YYYY-mm-dd.tar
-> cd VisualStudio\Layouts\vs2022s
+> cd VisualStudio\Layouts\msvs
 > msvsinstall.bat
 > cd \
 > %SystemRoot%\System32\tar.exe -cf xbuildutils-dist-%date%.tar xbuildutils
@@ -77,8 +77,6 @@ to the xbuildutils.
 
 ```
 
-This will create `cygwin64-x.y.z.tar` archive
-which you can use to install the cygwrun on multiple boxes.
 
 Open command prompt and change directory
 to the install directory.
