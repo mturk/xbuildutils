@@ -26,39 +26,40 @@ to the xbuildutils.
 > cd ..
 > cd msvs
 > msvsprepare.bat
-> %SystemRoot%\System32\tar.exe -cf xbuildutils-prep-%date%.tar C:\VisualStudio C:\xbuildutils
+> cd ..
+> %SystemRoot%\System32\tar.exe -cf xbuildutils-prep.tar C:\VisualStudio C:\xbuildutils
 
 ```
 
-Copy the xbuildutils-prep-YYYY-mm-dd.tar to a permanent storage location.
+Copy the xbuildutils-prep.tar to a permanent storage location.
 Reset the Virtual machine to the initial state
 
-Copy the xbuildutils-prep-YYYY-mm-dd.tar to the root of C drive.
+Copy the xbuildutils-prep.tar to the root of C drive.
 Open the command prompt as Administrator
 
 ```cmd
 > cd \
 > md VisualStudio
 > md xbuildutils
-> %SystemRoot%\System32\tar.exe -xf xbuildutils-prep-YYYY-mm-dd.tar
+> %SystemRoot%\System32\tar.exe -xf xbuildutils-prep.tar
 > cd VisualStudio\Layouts\msvs
 > msvsinstall.bat
 > cd \
-> %SystemRoot%\System32\tar.exe -cf xbuildutils-dist-%date%.tar xbuildutils
+> %SystemRoot%\System32\tar.exe -cf xbuildutils-dist.tar xbuildutils
 
 ```
 
-Copy the xbuildutils-dist-YYYY-mm-dd.tar to a permanent storage location.
+Copy the xbuildutils-dist.tar to a permanent storage location.
 Reset the Virtual machine to the initial state
 
-Copy the xbuildutils-dist-YYYY-mm-dd.tar to the root of C drive.
+Copy the xbuildutils-dist.tar to the root of C drive.
 Open the command prompt as Administrator
 
 ```cmd
 > cd \
 > md xbuildutils
-> %SystemRoot%\System32\tar.exe -xf xbuildutils-prep-YYYY-mm-dd.tar
-> rm xbuildutils-prep-YYYY-mm-dd.tar
+> %SystemRoot%\System32\tar.exe -xf xbuildutils-dist.tar
+> rm xbuildutils-dist.tar
 
 ```
 
