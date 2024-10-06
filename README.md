@@ -8,6 +8,8 @@ environment on Microsoft Windows platfom.
 Download or checkout the latest xbuildutils from
 [Github](https://github.com/mturk/xbuildutils)
 
+## Prepare distribution
+
 Open command prompt and change directory
 to the xbuildutils.
 
@@ -27,30 +29,35 @@ to the xbuildutils.
 > cd msvs
 > msvsprepare.bat
 > cd ..
-> %SystemRoot%\System32\tar.exe -cf xbuildutils-prep.tar C:\VisualStudio C:\xbuildutils
+> %SystemRoot%\System32\tar.exe -cf xbuildutils-prep.tar C:\xbuildutils
 
 ```
 
 Copy the xbuildutils-prep.tar to a permanent storage location.
 Reset the Virtual machine to the initial state
 
+
+## Setting distribution
+
 Copy the xbuildutils-prep.tar to the root of C drive.
 Open the command prompt as Administrator
 
 ```cmd
 > cd \
-> md VisualStudio
 > md xbuildutils
 > %SystemRoot%\System32\tar.exe -xf xbuildutils-prep.tar
-> cd VisualStudio\Layout\msvs
+> cd xbuildutils\layout\msvs
 > msvsinstall.bat
 > cd \
+> rd /S /Q xbuildutils\layout
 > %SystemRoot%\System32\tar.exe -cf xbuildutils-dist.tar xbuildutils
 
 ```
 
 Copy the xbuildutils-dist.tar to a permanent storage location.
-Reset the Virtual machine to the initial state
+Reset the Virtual machine to the initial state.
+
+## Installing distribution
 
 Copy the xbuildutils-dist.tar to the root of C drive.
 Open the command prompt as Administrator
