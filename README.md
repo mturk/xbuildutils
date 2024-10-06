@@ -64,6 +64,61 @@ Open the command prompt as Administrator
 
 The Virtual machine now has all te tools inside xbuildutils directory
 
+# Installing Cygwin
+
+Xbuildutils contains a non-interactive Cygwin installer.
+
+Open command prompt and change directory
+to the xbuildutils.
+
+```cmd
+> cd install\cygwin
+> cygwinprepare.bat
+
+```
+
+This will create `cygwin64-x.y.z.tar` archive
+which you can use to install the cygwrun on multiple boxes.
+
+Open command prompt and change directory
+to the install directory.
+
+```cmd
+> cs \
+> cd cygwin64\.install
+> cygwininstall.bat
+
+```
+
+After installation call the `cygwin.bat` for initial
+setup
+
+```cmd
+> cs \
+> cd cygwin64
+> call cygwin.bat
+
+```
+
+After that, setup users, add additional packages, etc.
+
+# Installing Msys2
+
+Xbuildutils contains a non-interactive Msys2 installer.
+
+Open command prompt and change directory
+to the xbuildutils.
+
+```cmd
+> cd install
+> installmsys2.bat
+
+```
+
+This will install Msys2 in **C:\mingw64** directory.
+After installation, open the **msys2_shell.cmd** and install
+additional packages, users, etc.
+
 
 # License
 
