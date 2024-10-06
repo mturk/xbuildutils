@@ -22,10 +22,10 @@ set "CygwinSetup=setup-x86_64-%CygwinSetupVer%.exe"
 rem
 rem Define required packages
 rem
-set "_P0=time,chere,cygrunsrv,attr,shutdown,ping,gnupg2"
-set "_P1=,diffutils,inetutils,dos2unix,patch,patchutils,nano"
-set "_P2=,cpio,unzip,xz,p7zip,zip,zstd,rpm,rpm-build"
-set "_P3=,git,curl,wget,wget2"
+set "_P0=attr,chere,cygrunsrv,gnupg2,ping,shutdown,time"
+set "_P1=,diffutils,dos2unix,inetutils,nano,patch,patchutils"
+set "_P2=,cpio,p7zip,rpm,rpm-build,unzip,xz,zip,zstd"
+set "_P3=,curl,git"
 set "_P4=,python,python3"
 rem
 goto SetPackages
