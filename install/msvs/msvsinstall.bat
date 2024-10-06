@@ -57,7 +57,7 @@ rem
 rem
 :doVsInstall
 echo.
-if exist "%_DESTDIR%\%_VSINSTALLDIR%\xvcvars.bat" (
+if exist "%_DESTDIR%\%_VSINSTALLDIR%\msvsvars.bat" (
   echo Installation Error
   echo %_DESTDIR%\%_VSINSTALLDIR% directory already exist
   exit /B 1
@@ -78,7 +78,7 @@ if "%ERRORLEVEL%" NEQ "0" (
 )
 rem
 popd
-robocopy . %_DESTDIR%\%_VSINSTALLDIR% README.txt xinstall.bat xvcvars.bat xvcvars.sh >NUL
+robocopy . %_DESTDIR%\%_VSINSTALLDIR% README.txt msvsvars.bat msvsvars.sh >NUL
 rem
 del /Q /F "%_DESTDIR%\%_VSINSTALLDIR%\Common7\Tools\vsdevcmd\ext\team_explorer.bat" >NUL 2>&1
 rem
