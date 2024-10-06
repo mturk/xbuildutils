@@ -1,0 +1,6 @@
+# /etc/fstab
+#
+# Set by cygwininstall.bat
+# Add noacl so that cygwin does not mess with Windows security
+#
+none /cygdrive cygdrive binary,noacl,posix=0,user 0 0

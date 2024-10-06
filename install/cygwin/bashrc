@@ -1,0 +1,9 @@
+#
+# Added by cygwininstall.bat
+# If not running interactively, don't do anything
+[[ "$-" != *i* ]] && return
+
+if [ ".$__CYGWINCD" != "." ]; then
+ cd "$__CYGWINCD"
+fi
+unset __CYGWINCD
