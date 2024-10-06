@@ -1,5 +1,0 @@
-# Declare files that will always have LF or CRLF line endings on checkout.
-*.sh eol=lf
-*.bat eol=crlf
-*.json eol=crlf
-*.txt eol=crlf
