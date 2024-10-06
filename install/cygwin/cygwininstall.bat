@@ -18,7 +18,7 @@ rem
 rem
 set "CygwinRoot=%SystemDrive%\cygwin64"
 rem
-call cygwinsetup.bat
+call cygwinconf.bat
 rem
 pushd ..\
 start /B /MIN /WAIT %CygwinSetup% -qnoOABXL -l "%CygwinRoot%\.packages" -s "%CygwinMirror%" -R "%CygwinRoot%" -P "%CygwinPackages%"

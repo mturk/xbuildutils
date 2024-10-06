@@ -19,7 +19,6 @@ rem
 set "CygwinRoot=%SystemDrive%\cygwin64"
 rem
 set "CurlOpts=-qkL --retry 5 --no-progress-meter"
-set "_XbuildUtilsDir=C:\xbuildutils"
 pushd %~dp0
 set "_WorkPath=%cd%"
 pushd ..\..\utils
@@ -27,7 +26,7 @@ set "PATH=%cd%;%PATH%"
 popd
 popd
 rem
-call cygwinsetup.bat
+call cygwinconf.bat
 rem
 rem
 rem Check if already installed
@@ -37,10 +36,9 @@ if exist %CygwinRoot% (
 )
 md %CygwinRoot% >NUL
 pushd %CygwinRoot%
-if not exist "%CygwinSetup%" (
-  echo Downloading Cygwin setup
-  curl.exe %CurlOpts% -o %CygwinSetup% https://cygwin.com/setup-x86_64.exe
-)
+echo Downloading Cygwin setup
+curl.exe %CurlOpts% -o %CygwinSetup% https://cygwin.com/setup-x86_64.exe
+rem
 if not exist "%CygwinSetup%" (
   echo.
   echo Failed to download Cygwin setup
@@ -50,7 +48,7 @@ rem
 start /B /MIN /WAIT %CygwinSetup% -qnoOABXD -l "%CygwinRoot%\.packages" -s "%CygwinMirror%" -R "%CygwinRoot%" -P "%CygwinPackages%"
 popd
 rem
-robocopy . %CygwinRoot%\.install bashrc fstab cygwhere.bat cygwinsetup.bat cygwininstall.bat >NUL
+robocopy . %CygwinRoot%\.install bashrc fstab cygwhere.bat cygwinconf.bat cygwininstall.bat >NUL
 rem
 if /i "x%~1" NEQ "x/d" goto End
 rem
