@@ -1,4 +1,0 @@
-# Declare files that will always have LF or CRLF line endings on checkout.
-bashrc eol=lf
-fstab eol=lf
-history eol=lf
