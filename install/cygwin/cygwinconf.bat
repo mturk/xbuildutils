@@ -15,7 +15,6 @@ rem
 rem Set version and packages
 rem
 rem
-set "CygwinMin=1"
 set "CygwinMirror=https://mirrors.kernel.org/sourceware/cygwin/"
 set "CygwinSetupVer=2.932"
 set "CygwinVersion=3.5.4"
@@ -28,7 +27,9 @@ set "_P1=,diffutils,inetutils,dos2unix,patch,patchutils,nano"
 set "_P2=,cpio,unzip,xz,p7zip,zip,zstd,rpm,rpm-build"
 set "_P3=,git,curl,wget,wget2"
 set "_P4=,python,python3"
-if "x%CygwinMin%" EQ "x1" goto SetPackages
+rem
+goto SetPackages
+Rem Comment above line to install some basic dev packages
 set "_P5=,bison,byacc,flex"
 set "_P6=,autoconf,automake,autogen,autobuild,libtool,m4,make,makedepend"
 set "_P7=,w32api-headers,w32api-runtime,windows-default-manifest"
