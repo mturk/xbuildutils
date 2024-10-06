@@ -50,8 +50,10 @@ rem
 start /B /MIN /WAIT %CygwinSetup% -qnoOABXD -l "%CygwinRoot%\.packages" -s "%CygwinMirror%" -R "%CygwinRoot%" -P "%CygwinPackages%"
 popd
 rem
-:CreateDist
 robocopy . %CygwinRoot%\.install bashrc fstab cygwhere.bat cygwinsetup.bat cygwininstall.bat >NUL
+rem
+if /i "x%~1" NEQ "x/d" goto End
+rem
 set "CygwinArchive=cygwin64-%CygwinVersion%.tar"
 rem Use Windows tar utility
 echo.

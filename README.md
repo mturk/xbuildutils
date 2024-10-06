@@ -25,7 +25,7 @@ to the xbuildutils.
 > getopenjdk21u.bat /i
 > cd ..
 > cd msvs
-> xprepare.bat
+> msvsprepare.bat
 > %SystemRoot%\System32\tar.exe -cf xbuildutils-prep-%date%.tar C:\VisualStudio C:\xbuildutils
 
 ```
@@ -42,7 +42,7 @@ Open the command prompt as Administrator
 > md xbuildutils
 > %SystemRoot%\System32\tar.exe -xf xbuildutils-prep-YYYY-mm-dd.tar
 > cd VisualStudio\Layouts\vs2022s
-> xinstall.bat
+> msvsinstall.bat
 > cd \
 > %SystemRoot%\System32\tar.exe -cf xbuildutils-dist-%date%.tar xbuildutils
 
@@ -115,7 +115,7 @@ to the xbuildutils.
 
 ```
 
-This will install Msys2 in **C:\mingw64** directory.
+This will install Msys2 in **C:\msys64** directory.
 After installation, open the **msys2_shell.cmd** and install
 additional packages, users, etc.
 

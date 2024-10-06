@@ -70,7 +70,7 @@ if "%ERRORLEVEL%" NEQ "0" (
 )
 rem
 popd
-robocopy . %_VSLAYOUTDIST% README.txt xinstall.bat xvcvars.bat xvcvars.sh >NUL
+robocopy . %_VSLAYOUTDIST% README.txt msvsinstall.bat msvsvars.bat msvsvars.sh >NUL
 copy /Y xresponse.json %_VSLAYOUTDIST%\%_VSINSTALLPKG%\Response.json >NUL
 rem
 if /i "x%~1" EQU "x/u" goto End
