@@ -18,7 +18,7 @@ rem Offline Installer for Visual Studio 2022 LTSC Build Tools
 rem
 rem
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.10.7_LTSC"
+set "_VSPRODUCTBLD=17.10.9_LTSC"
 set "_SDKBASEDIR=Win11SDK_10.0.22621,version=10.0.22621.6,productarch=neutral"
 set "_SDKPRODUCTWVER=10.0.22621.6"
 rem

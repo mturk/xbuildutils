@@ -20,7 +20,7 @@
 _XbuildUtilsDir="C:/xbuildutils"
 #
 export VisualStudioVersion="17.0"
-export VSCMD_VER="17.10.7"
+export VSCMD_VER="17.10.9"
 export VCToolsVersion="14.40.33807"
 export WindowsSdkVersion="10.0.22621.0"
 #

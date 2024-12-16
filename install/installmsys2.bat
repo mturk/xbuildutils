@@ -18,8 +18,8 @@ rem
 rem @author Mladen Turk
 rem
 set "Msys2VerMajor=2024"
-set "Msys2VerMinor=07"
-set "Msys2VerPatch=27"
+set "Msys2VerMinor=12"
+set "Msys2VerPatch=08"
 set "Msys2Version=%Msys2VerMajor%%Msys2VerMinor%%Msys2VerPatch%"
 set "Msys2VerDate=%Msys2VerMajor%-%Msys2VerMinor%-%Msys2VerPatch%"
 rem

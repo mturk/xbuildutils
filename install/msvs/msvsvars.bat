@@ -17,7 +17,7 @@ rem
 set "_XbuildUtilsDir=C:\xbuildutils"
 rem
 set "VisualStudioVersion=17.0"
-set "VSCMD_VER=17.10.7"
+set "VSCMD_VER=17.10.9"
 set "VCToolsVersion=14.40.33807"
 set "WindowsSdkVersion=10.0.22621.0"
 rem

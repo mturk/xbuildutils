@@ -16,8 +16,8 @@ rem
 rem Dowload and install Temurin OpenJDK11U jdk
 rem
 set "JavaVersion=11"
-set "JavaRelease=11.0.24"
-set "JavaBuild=8"
+set "JavaRelease=11.0.25"
+set "JavaBuild=9"
 rem
 pushd %~dp0
 set "_WorkPath=%cd%"

@@ -17,7 +17,7 @@ rem Create offline Installer for Visual Studio 2022 LTSC Build Tools
 rem
 rem
 set "_VSPRODUCTVER=2022"
-set "_VSPRODUCTBLD=17.10.7_LTSC"
+set "_VSPRODUCTBLD=17.10.9_LTSC"
 rem
 pushd %~dp0
 set "_WORKDIR=%cd%"
@@ -53,7 +53,7 @@ rem Download vs_build tools
 rem https://learn.microsoft.com/en-us/visualstudio/releases/2022/release-history
 rem
 curl.exe %CurlOpts% -o %_MSCINSTALLER% ^
-https://download.visualstudio.microsoft.com/download/pr/ec47fbc2-ecab-4073-a3a1-677f6790b1b5/3d769d89a57e29a80154da980b7b84646d540702415b15c9c3c44e099fe1133c/vs_BuildTools.exe
+https://download.visualstudio.microsoft.com/download/pr/4ae9ea68-8765-4182-8d40-577ce66203b5/14419bae89be9115f47610909a01bd55e75e2581b3abc3016c52728049c75d38/vs_BuildTools.exe
 
 if not exist "%_MSCINSTALLER%" (
   echo Missing %_MSCINSTALLER%
